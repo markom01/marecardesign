@@ -1,3 +1,62 @@
+/* Loader */
+
+#loader {
+  height: 100vh;
+  width: 100vw;
+  background: white;
+  animation: fadeIn ease 1s;
+}
+
+#ellipse {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: circular 2s linear infinite;
+}
+
+#logo {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* Animations */
+
+@keyframes circular {
+  0% {
+    transform: rotate(0deg) translate(-50px);
+  }
+  100% {
+    transform: rotate(360deg) translate(-50px);
+  }
+}
+
+/* Global Variables */
+
+:root {
+  --primary-color: #276ebf;
+  --secondary-color: #2981f2;
+  --p-color: #554e4e;
+  --main-gradient: linear-gradient(
+    261.75deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 99.31%
+  );
+  --main-shadow: 8px 9px 20px 1px rgba(0, 0, 0, 0.35);
+}
+
+/* Content */
+
 * {
   margin: 0px;
   padding: 0px;
@@ -5,24 +64,30 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* Typography */
+
 h1 {
   font-style: normal;
   font-weight: bold;
-  font-size: 40px;
-  line-height: 69px;
+  line-height: 50px;
+  font-size: calc(30px + 0.5vw);
 }
 
 p {
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
-  line-height: 55px;
-  color: #554E4E;
+  font-size: calc(14px + 0.5vw);
+  line-height: 1.5;
+  color: var(--p-color);
 }
+
+/* Main Content */
 
 main {
   padding: 0px 10% 0px 10%;
 }
+
+/* Header */
 
 li,
 a {
@@ -31,6 +96,7 @@ a {
 
 header {
   display: flex;
+  position: relative;
   justify-content: space-around;
   align-items: center;
   margin: auto;
@@ -40,21 +106,27 @@ header {
 
 .logo-container,
 .nav-links,
-.cart {
-	display: flex;
+.contact-btn {
+  display: flex;
 }
 
 .logo-container {
-  cursor: pointer;
   flex: 1;
 }
 
-.logo-container img {
+.logo {
   height: 80px;
+  cursor: pointer;
 }
 
 nav {
-	flex: 2;
+  flex: 2;
+}
+
+div.btn-container {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
 }
 
 .nav-links {
@@ -62,13 +134,8 @@ nav {
   justify-content: space-around;
 }
 
-/*.nav-links li {
-  display: inline-block;
-  padding: 0px 20px;
-}*/
-
 .nav-link {
-  color: #276EBF;
+  color: var(--primary-color);
 }
 
 .nav-links li a {
@@ -76,80 +143,71 @@ nav {
 }
 
 .nav-links li a:hover {
-  color: #2981F2;
+  color: var(--secondary-color);
 }
 
-.cart {
-  flex: 1;
-  justify-content: flex-end;
-}
-
-.cart img {
-  height: 30px;
-}
+/* Hero Section */
 
 .hero {
   display: flex;
   margin: auto;
   min-height: 80vh;
-  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
-.hero-content {
+div.hero-content {
+  display: flex;
   flex: 1;
+  flex-wrap: wrap;
+  padding: 5vh 0;
 }
 
 #spaced-text {
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
-  line-height: 229.9%;
-
-  /* or 60px */
-  display: flex;
-  align-items: center;
   letter-spacing: 0.5em;
-
-  color: #000000;
 }
 
-.cta {
-  margin-top: 50px;
-}
-
-.cta-buy {
-  cursor: pointer;
-  padding: 16px 35px;
-  width: 150px;
-  height: 50px;
-  background: linear-gradient(261.75deg, #276EBF 0%, #2981F2 99.31%);
-  border: none;
-  border-radius: 10px;
-  color: white;
-
-}
-
-.cta-more {
-  margin: 30px 0px 0px 30px;
-  cursor: pointer;
-  width: 150px;
-  height: 50px;
-  background: white;
-  border-color: #276EBF;
-  border-radius: 10px;
-  color: #276EBF;
-}
-
-.hero-image {
+.hero-image-wrapper {
   flex: 1;
   display: flex;
   justify-content: end;
-  height: 40vh;
-  
+  height: 50vh;
 }
 
-.hero-image img{
+.hero-image {
   height: 100%;
-  box-shadow: 8px 9px 20px 1px rgba(0, 0, 0, 0.35);
-  border-radius: 25px;
+  box-shadow: var(--main-shadow);
+  border-radius: 10px;
+}
+
+.hero-paragraph {
+  margin-top: 5vh;
+}
+
+div.cta {
+  display: flex;
+  align-items: flex-end;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px;
+  width: 150px;
+  height: 50px;
+  border-style: none;
+}
+
+button.cta-primary {
+  margin-right: 30px;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+button.cta-secondary {
+  background: white;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
 }

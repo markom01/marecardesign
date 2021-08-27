@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,13 +10,31 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./js/main.js"></script>
     <title>Mare Car Design | Home</title>
   </head>
+
   <body>
+
+    <!-- Loader -->
+
+    <div id="loader">
+      <img id="ellipse"src="./images/Ellipse 1.png" alt="Ellipse">
+      <img id="logo" src="./images/MCD Logo-transparent 1.png" alt="Loader logo">
+    </div>
+
+  <!-- Content -->
+
+    <!-- Header -->
+
     <header>
+
       <div class="logo-container">
-        <img src="./images/logo.png" alt="logo" />
+        <a href="/">
+          <img class="logo" src="./images/logo.png" alt="Logo">
+        </a>
       </div>
+
       <nav>
         <ul class="nav-links">
           <li><a class="nav-link" href="#">How It Works</a></li>
@@ -23,28 +42,40 @@
           <li><a class="nav-link" href="#">About</a></li>
         </ul>
       </nav>
-        <div class="cart">
-          <img src="images/cart.png" alt="cart" />
-        </div>
+      <div class="btn-container">
+        <button class="cta-secondary" id="header-btn">Contact Me</button>
       </div>
+      
+
     </header>
-      <main>
-        <section class="hero">
-          <div class="hero-content">
-            <div class="hero-text">
-              <h2 id="spaced-text">AUTOMOTIVE DESIGN</h3>
-              <h1>Find great automotive art.</h1>
-              <p>Get your favorite car drawing  or illustration for a great price!</p>
-              <div class="cta">
-                <button class="cta-buy">Buy Now</button>
-                <button class="cta-more">Explore</button>
-              </div>
-            </div>
+
+    <main>
+
+      <!-- Hero Section -->
+
+      <section class="hero">
+
+        <div class="hero-content">
+
+          <div class="hero-text">
+            <p id="spaced-text">AUTOMOTIVE DESIGN</h3>
+            <h1>Find great automotive art.</h1>
+            <p class="hero-paragraph">Get your favorite car drawing  or illustration for a great price!</p>
           </div>
-          <div class="hero-image">
-            <img src="./images/bmw320-virtualtuning.jpg" alt="Hero image" />
+          <div class="cta">
+              <button class="cta-primary">Buy Now</button>
+              <button class="cta-secondary">Explore</button>
           </div>
-        </section>
-        
+        </div>
+
+        <div class="hero-image-wrapper">
+          <img class="hero-image" src="./images/bmw320-virtualtuning.jpg" alt="Hero image">
+        </div>
+
+      </section>
+    
+    </main>
+  
   </body>
+
 </html>
