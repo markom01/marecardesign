@@ -1,15 +1,34 @@
+/* Global Variables */
+
+:root {
+  font-size: 62.5%;
+  --border-radius: 1rem;
+
+  --primary-color: rgba(39, 110, 191, 1);
+  --secondary-color: rgba(41, 129, 242, 1);
+  --p-color: #554e4e;
+  --main-gradient: linear-gradient(
+    261.75deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 99.31%
+  );
+  --main-shadow: rgba(39, 110, 191, 0.25) 0rem 5rem 10rem -2rem,
+    rgba(41, 129, 242, 0.3) 0rem 3rem 6rem -3rem;
+  --button-shadow: rgba(39, 110, 191, 0.25) 0rem 1rem 1rem -0.2rem,
+    rgba(41, 129, 242, 0.3) 0rem 0.3rem 0.6rem -0.3rem;
+}
+
 /* Loader */
 
 #loader {
   height: 100vh;
   width: 100vw;
   background: white;
-  animation: fadeIn ease 1s;
 }
 
 #ellipse {
-  width: 100px;
-  height: 100px;
+  width: 10rem;
+  height: 10rem;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -20,8 +39,8 @@
 }
 
 #logo {
-  width: 75px;
-  height: 75px;
+  width: 7.5rem;
+  height: 7.5rem;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -34,32 +53,63 @@
 
 @keyframes circular {
   0% {
-    transform: rotate(0deg) translate(-50px);
+    transform: rotate(0deg) translate(-5rem);
   }
   100% {
-    transform: rotate(360deg) translate(-50px);
+    transform: rotate(360deg) translate(-5rem);
   }
 }
 
-/* Global Variables */
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    position: relative;
+    right: -5vw;
+  }
+  to {
+    opacity: 1;
+    position: relative;
+    right: 0vw;
+  }
+}
 
-:root {
-  --primary-color: #276ebf;
-  --secondary-color: #2981f2;
-  --p-color: #554e4e;
-  --main-gradient: linear-gradient(
-    261.75deg,
-    var(--primary-color) 0%,
-    var(--secondary-color) 99.31%
-  );
-  --main-shadow: 8px 9px 20px 1px rgba(0, 0, 0, 0.35);
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    position: relative;
+    left: -5vw;
+  }
+  to {
+    opacity: 1;
+    position: relative;
+    left: 0vw;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 /* Content */
 
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0rem;
+  padding: 0rem;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
@@ -67,41 +117,54 @@
 /* Typography */
 
 h1 {
-  font-style: normal;
   font-weight: bold;
-  line-height: 50px;
-  font-size: calc(30px + 0.5vw);
+  font-size: calc(3rem + 0.7vw);
+  line-height: calc(4rem + 0.7vw);
 }
 
 p {
-  font-style: normal;
-  font-weight: normal;
-  font-size: calc(14px + 0.5vw);
-  line-height: 1.5;
+  font-size: calc(1.4rem + 0.4vw);
+  line-height: calc(2rem + 0.4vw);
   color: var(--p-color);
+}
+
+#spaced-text {
+  letter-spacing: calc(0.5rem + 0.4vw);
+  animation-name: slide-in-left;
+  animation-duration: 2s;
+  animation-fill-mode: both;
 }
 
 /* Main Content */
 
 main {
-  padding: 0px 10% 0px 10%;
+  padding-inline: 10vw;
 }
+
+/*
+.above-the-fold {
+  max-height: 100vh;
+  margin-bottom: 5rem;
+}
+*/
 
 /* Header */
 
 li,
 a {
   text-decoration: none;
+  font-size: calc(1.2rem + 0.2vw);
 }
 
 header {
   display: flex;
-  position: relative;
   justify-content: space-around;
   align-items: center;
   margin: auto;
-  width: 80%;
   height: 20vh;
+  animation-name: appear;
+  animation-duration: 2s;
+  animation-fill-mode: both;
 }
 
 .logo-container,
@@ -112,10 +175,11 @@ header {
 
 .logo-container {
   flex: 1;
+  height: 8rem;
 }
 
 .logo {
-  height: 80px;
+  height: calc(7rem + 0.4vw);
   cursor: pointer;
 }
 
@@ -123,10 +187,16 @@ nav {
   flex: 2;
 }
 
-div.btn-container {
+.btn-container {
   display: flex;
   flex: 1;
   justify-content: flex-end;
+}
+
+#header-btn {
+  animation-name: appear;
+  animation-duration: 2s;
+  animation-fill-mode: both;
 }
 
 .nav-links {
@@ -139,7 +209,7 @@ div.btn-container {
 }
 
 .nav-links li a {
-  transition: all 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
 }
 
 .nav-links li a:hover {
@@ -151,63 +221,117 @@ div.btn-container {
 .hero {
   display: flex;
   margin: auto;
+  align-items: center;
   min-height: 80vh;
-  align-content: center;
-  flex-wrap: wrap;
 }
 
-div.hero-content {
-  display: flex;
+.hero-content {
   flex: 1;
-  flex-wrap: wrap;
-  padding: 5vh 0;
+  margin-block: calc(2rem + 0.2vw);
+  margin-right: calc(3rem + 0.2vw);
+  align-self: center;
 }
 
-#spaced-text {
-  font-style: normal;
-  font-weight: normal;
-  letter-spacing: 0.5em;
+.hero-header {
+  animation-name: slide-in-left;
+  animation-duration: 2s;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+.hero-paragraph {
+  padding-block: calc(3vh + 0.5vw);
+  margin-block: calc(2rem + 0.3vw);
+  animation-name: slide-in-left;
+  animation-duration: 2s;
+  animation-delay: 0.4s;
+  animation-fill-mode: both;
 }
 
 .hero-image-wrapper {
   flex: 1;
   display: flex;
   justify-content: end;
-  height: 50vh;
 }
 
 .hero-image {
-  height: 100%;
-  box-shadow: var(--main-shadow);
-  border-radius: 10px;
+  width: 40rem;
+  height: 30rem;
+  min-width: 40rem;
+  border-radius: var(--border-radius);
+  animation-name: slide-in-right;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  transition: box-shadow 0.4s;
 }
 
-.hero-paragraph {
-  margin-top: 5vh;
-}
-
-div.cta {
+.cta {
   display: flex;
   align-items: flex-end;
 }
 
 button {
   cursor: pointer;
-  border-radius: 10px;
-  padding: 10px;
-  width: 150px;
-  height: 50px;
+  padding: 1rem;
+  width: calc(12rem + 1vw);
+  height: calc(3.5rem + 1vw);
+  border-radius: var(--border-radius);
+  font-size: calc(1rem + 0.2vw);
   border-style: none;
+  vertical-align: middle;
+  transition: scale 0.4s;
 }
 
-button.cta-primary {
-  margin-right: 30px;
+button:hover {
+  scale: 110%;
+  box-shadow: var(--button-shadow);
+}
+
+.hero-image:hover {
+  box-shadow: var(--main-shadow);
+}
+
+.cta-primary {
+  margin-right: 3rem;
   background-color: var(--primary-color);
   color: white;
+  animation-name: slide-in-left;
+  animation-duration: 2s;
+  animation-delay: 0.6s;
+  animation-fill-mode: both;
 }
 
-button.cta-secondary {
+.cta-secondary {
   background: white;
-  border: 2px solid var(--primary-color);
+  border: 0.2rem solid var(--primary-color);
   color: var(--primary-color);
+  animation-name: slide-in-left;
+  animation-duration: 2s;
+  animation-delay: 0.8s;
+  animation-fill-mode: both;
+}
+
+/* Media Queries */
+
+@media all and (max-width: 1000px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-content {
+    text-align: center;
+    width: 80vw;
+  }
+
+  .cta {
+    margin: auto;
+    margin-bottom: 3rem;
+    justify-content: center;
+  }
+
+  .hero-image-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
 }
