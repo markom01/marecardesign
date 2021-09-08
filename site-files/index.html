@@ -5,24 +5,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap"
-      rel="stylesheet"
-    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet"> 
+    
     <link rel="shortcut icon" href="./images/MCD Logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="./styles/style.css" />
-    <script src="./js/main.js"></script>
+    
     <title>Mare Car Design | Home</title>
+
   </head>
 
   <body>
-
-  <!-- Loader -->
-
-    <div id="loader">
-      <img id="ellipse"src="./images/Ellipse 1.png" alt="Ellipse">
-      <img id="logo" src="./images/MCD-Logo-loader.png" alt="Loader logo">
-    </div>
 
   <!-- Content -->
 
@@ -38,20 +33,18 @@
               <img class="logo" src="./images/MCD-Logo.jpg" alt="Logo">
           </div>
 
-          <nav>
+          <nav class="header-nav">
             <ul class="nav-links">
               <li><a class="nav-link" href="#">How It Works</a></li>
               <li><a class="nav-link" href="#">Products</a></li>
               <li><a class="nav-link" href="#">About</a></li>
             </ul>
           </nav>
+
           <div class="burger">
             <div class="line1"></div>
             <div class="line2"></div>
             <div class="line3"></div>
-          </div>
-          <div class="btn-container">
-            <button class="cta-secondary" id="header-btn">Contact Me</button>
           </div>
           
         </header>
@@ -68,7 +61,7 @@
               <p class="hero-paragraph">Get your favorite car drawing  or illustration for a great price!</p>
             </div>
             <div class="cta">
-                <button class="cta-primary">Buy Now</button>
+                <button class="cta-primary">Contact Me</button>
               <a href="#services">  
                 <button class="cta-secondary">Explore</button>
               </a>
@@ -89,33 +82,68 @@
         </div>
         <class class="cards">
           <div class="card">
-            <p class="card-heading">Car Illustrations</h2>
+            <h3 class="card-heading">Car Illustrations</h2>
             <div class="card-icon">
-              <img src="images/cart.png" alt="Car Illustrations Icon" />
+              <img src="images/Illustrations.jpg" alt="Car Illustrations Icon" />
             </div>
             <p class="card-p">Get your favorite car drawing  or illustration for a great price!</p>
             <button class="cta-secondary" id="card-button">More Details</button>
             </div>
           <div class="card">
-            <p class="card-heading">Car Sketches</h2>
+            <h3 class="card-heading">Car Sketches</h2>
             <div class="card-icon">
-              <img src="images/cart.png" alt="Car Sketches Icon" />
+              <img src="images/Sketches.jpg" alt="Car Sketches Icon" />
             </div>
             <p class="card-p">Get your favorite car drawing  or illustration for a great price!</p>
             <button class="cta-secondary" id="card-button">More Details</button>
           </div>
           <div class="card">
-            <p class="card-heading">Car Wrap Design</h2>
+            <h3 class="card-heading">Car Wrap Design</h2>
             <div class="card-icon">
-              <img src="images/cart.png" alt="Car Wrap Design" />
+              <img src="images/Wraps.jpg" alt="Car Wrap Design" />
             </div>
             <p class="card-p">Get your favorite car drawing  or illustration for a great price!</p>
             <button class="cta-secondary" id="card-button">More Details</button>
           </div>
       </section>
-
     </main>
   
   </body>
+
+  <footer>
+
+    <div class="footer-content">
+
+      <div class="footer-column" id="first-col">
+        <h3 class="footer-headline">MARE CAR DESIGN</h3>
+        <div class="icons">
+          <a href="https://www.facebook.com/marecardesign" target="_blank"><img class="icon" src="./images/facebook.svg"></a>
+          <a href="https://www.instagram.com/marecardesign" target="_blank"><img class="icon" src="./images/instagram.svg"></a>
+          <a href="https://www.linkedin.com/in/marecardesigner" target="_blank"><img class="icon" id="last-icon" src="./images/linkedin.svg"></a>
+        </div>
+      </div>
+      
+      <nav class="footer-column">
+        <h3 class="footer-title">Navigation</h3>
+        <ul class="footer-links">
+          <li a class="footer-link" href="#">How It Works</a></li>
+          <li a class="footer-link" href="#">Products</a></li>
+          <li a class="footer-link" href="#">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-column">
+        <h3 class="footer-title">About</h3>
+        <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Aenean felis diam, porta ut quam in, fringilla finibus leo.
+          Maecenas sollicitudin turpis eget eros mollis condimentum.
+          Nam sagittis tellus eros, at eleifend arcu interdum vel.
+          Proin efficitur sodales ex, sed tincidunt ex pharetra vel.
+        </p>        
+      </div>
+
+    </div>
+
+  </footer>  
 
 </html>
