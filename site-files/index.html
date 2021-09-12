@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet"> 
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="shortcut icon" href="./images/MCD Logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="./styles/style.css" />
     
@@ -21,32 +21,31 @@
 
     <!-- Content -->
 
-    <main>
+    
 
       <!-- Header -->
 
       <header>
-
-        <div class="logo-container">
+        <nav id="head-nav">
+          <div class="logo-container">
             <img class="logo" src="./images/MCD-Logo.webp" alt="Logo">
-        </div>
-
-        <nav class="header-nav">
-          <ul class="nav-links">
-            <li><a class="nav-link" href="#">How It Works</a></li>
-            <li><a class="nav-link" href="#">Products</a></li>
-            <li><a class="nav-link" href="#">About</a></li>
-          </ul>
-        </nav>
-
-        <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
+          </div>
+         <input type="checkbox" id="click">
+         <label for="click" class="menu-btn">
+         <i class="fas fa-bars"></i>
+         </label>
+         <ul id="head-ul">
+            <li class="head-li"><a href="#">About</a></li>
+            <li class="head-li"><a href="#">Services</a></li>
+            <li class="head-li"><a href="#">Gallery</a></li>
+            <li class="head-li"><a href="#">Contact</a></li>
+         </ul>
+      </nav>
+        
         
       </header>
 
+      <main>
       <!-- Hero Section -->
 
       <section class="hero">
@@ -105,7 +104,7 @@
     </main>
   
   </body>
-
+  <div class="space"></div>
   <footer>
 
     <div class="footer-content">
@@ -119,14 +118,15 @@
         </div>
       </div>
       
-      <nav class="footer-column">
+      <div class="footer-column">
         <h3 class="footer-title">Navigation</h3>
         <ul class="footer-links">
-          <li a class="footer-link" href="#">How It Works</a></li>
-          <li a class="footer-link" href="#">Products</a></li>
           <li a class="footer-link" href="#">About</a></li>
+          <li a class="footer-link" href="#">Services</a></li>
+          <li a class="footer-link" href="#">Gallery</a></li>
+          <li a class="footer-link" href="#">Contact</a></li>
         </ul>
-      </nav>
+      </div>
 
       <div class="footer-column">
         <h3 class="footer-title">About</h3>
