@@ -11,7 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="shortcut icon" href="./images/MCD Logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./styles/style.css" />
+    
     
     <title>Mare Car Design | Home</title>
 
@@ -59,8 +61,8 @@
           </div>
           <div class="cta">
               <button class="cta-primary">Contact Me</button>
-            <a href="#services">  
-              <button class="cta-secondary">Explore</button>
+            <a class="btn-wrapper" href="#services">  
+              <button class="cta-secondary" id="hero-cta-secondary">Explore</button>
             </a>
           </div>
         </div>
@@ -100,6 +102,70 @@
           <p class="card-p">Get your favorite car drawing  or illustration for a great price!</p>
           <button class="cta-secondary" id="card-button">More Details</button>
         </div>
+      </class>
+    </section>
+
+    <section class="contact">
+      <h2 class="section-title">Contact</h2>
+      <div id="form-wrapper">
+        <form netlify>
+
+          <div class="form-column">
+            <label for="fname"></label>
+            <input type="text" id="fname" name="name" placeholder="Name">
+            <label for="femail"></label>
+            <input type="text" autocomplete="off" id="femail" name="email" placeholder="Email">
+            
+          </div>
+
+          <div class="form-column" id="form-radio-buttons">
+            <ul class="option-list">
+              <p>Choose your service:</p>
+              <li class="option-item">
+                <input type="radio" id="car-sketching" name="service" value="Car Sketching">
+                <label for="car-sketching">Car Sketching</label><br>
+              </li>
+              <li class="option-item">
+                <input type="radio" id="car-wrap-design" name="service" value="Car Wrap Design">
+                <label for="car-wrap-design">Car Wrap Design</label><br>
+              </li>
+              <li class="option-item">
+                <input type="radio" id="car-illustration" name="service" value="Car illustration">
+                <label for="car-illustration">Car illustration</label>
+              </li>
+              <li class="option-item">
+                <input type="radio" id="visual-car-tuning" name="service" value="Visual Car Tuning">
+                <label for="visual-car-tuning">Visual Car Tuning</label><br>
+              </li>
+              <li class="option-item">
+                <input type="radio" id="web-and-graphic-design" name="service" value="Web and Graphic Design">
+                <label for="web-and-graphic-design">Web and Graphic Design</label><br>
+              </li>
+              <li class="option-item">
+                <input type="radio" id="something-else" name="service" value="Something Else...">
+                <label for="something-else">Something Else...</label>
+              </li>
+            </ul>
+            
+          </div>
+          
+          <div class="form-column">
+            <label for="fmessage"></label>
+            <textarea id="fmessage" name="message" placeholder="Type Message" contenteditable="true"></textarea>
+              <div class="file-upload">
+                <label for="file-input">
+                  <img src="./images/attachment.svg"/>
+                </label>
+                <input id="file-input" type="file" />
+                <p class="small-paragraph">Add atachment...</p>
+              </div>
+          </div>
+          <div class="form-btn-wrapper">
+            <button class="cta-primary" type="submit" value="Submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </section>
 
     </main>
   
