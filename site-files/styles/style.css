@@ -129,6 +129,7 @@ button {
   font-weight: 500;
   border-style: none;
   transition: all 0.3s;
+  background-color: transparent;
 }
 
 button:hover {
@@ -193,8 +194,8 @@ main {
 }
 
 section {
-  margin-bottom: 8rem;
-  min-height: 100vh;
+  margin-bottom: 20rem;
+  min-height: 80vh;
 }
 
 /* Header */
@@ -236,10 +237,10 @@ nav ul li{
 nav ul li a{
   color: var(--primary-color);
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 500;
-  padding: 10px 15px;
-  letter-spacing: 1px;
+  padding: 1rem 1.5rem;
+  letter-spacing: .1rem;
   transition: color .3s;
 }
 
@@ -251,7 +252,7 @@ nav ul li a:hover{
 
 nav .menu-btn i{
   color: var(--primary-color);
-  font-size: 22px;
+  font-size: 2rem;
   cursor: pointer;
   display: none;
 }
@@ -289,11 +290,12 @@ input[type="checkbox"]{
 }
 
 .hero-image-wrapper {
+  display: flex;
   flex: 1;
   margin: auto;
-  justify-content: end;
   width: 30vw;
   max-width: 50rem;
+  position: relative;
 }
 
 .hero-image {
@@ -305,6 +307,9 @@ input[type="checkbox"]{
   transition: all 0.4s;
 }
 
+
+
+
 .cta {
   display: flex;
   width: 100%;
@@ -314,9 +319,7 @@ input[type="checkbox"]{
   text-decoration: none;
 }
 
-.hero-image:hover {
-  box-shadow: var(--second-shadow);
-}
+
 
 .cta-primary {
   background-color: var(--primary-color);
@@ -338,14 +341,10 @@ input[type="checkbox"]{
 
 /* Services */
 
-#services {
-  margin-bottom: 10vw;
-}
-
 .section-title {
   text-align: center;
   padding-block: 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
   text-transform: uppercase;
   color: var(--primary-color);
   letter-spacing: .3rem;
@@ -362,7 +361,6 @@ input[type="checkbox"]{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-bottom: 5rem;
 }
 
 .card {
@@ -390,8 +388,8 @@ input[type="checkbox"]{
 }
 
 .card-p {
+  margin-block: auto;
   font-size: 1.4em;
-  margin-top: 0rem;
 }
 
 .card-icon img{
@@ -412,7 +410,64 @@ input[type="checkbox"]{
   box-shadow: var(--second-shadow);
 }
 
+/* Gallery */
+
+.gallery {
+  width: 100%;
+  height: 100%;
+  
+}
+
+.gallery-pictures-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.gallery-picture {
+  margin: 2rem;
+  width: 40%;
+  border-radius: var(--border-radius);
+}
+
+.overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+  opacity: 0;
+  transition: .3s;
+}
+
+.overlay .overlay-button {
+  color: white;
+  border: 0.2rem solid white;
+}
+
+.overlay-text {
+  color: white;
+}
+
+.overlay:hover {
+  opacity: 1;
+  background: rgba(0, 0, 0, .3);
+  box-shadow: var(--second-shadow);  
+}
+
+.gallery .cta-secondary {
+  margin: auto;
+}
+
 /* Contact */
+
+.contact {
+  min-height:auto;
+}
 
 form {
   display: flex;
@@ -528,6 +583,9 @@ button[type=submit] {
   margin-top: 1rem;
 }
 
+.space {
+  height: 20rem;
+}
 
 /* Footer */
 
@@ -538,7 +596,6 @@ footer {
   min-height: 50rem;
   background: linear-gradient(180deg, #2981F2 0%, #276EBF 100%);
   align-items: stretch;
-  margin-top: 3rem;
   padding-block: 5rem;
 }
 
@@ -602,8 +659,13 @@ footer {
   font-size: calc(1.2rem + 0.2vw);
 }
 
+.footer-link a {
+  cursor: pointer;
+}
+
 .footer-link {
-  line-height: 35px;
+  margin: 2rem;
+  cursor: pointer;
   min-width: 8.5rem;
 }
 
@@ -615,6 +677,10 @@ footer {
 
 @media all and (max-width: 1023px) {
   
+  section {
+    margin-bottom: 15rem;
+  }
+
   nav ul li {
     margin-inline: .5rem;
   }
@@ -702,6 +768,10 @@ footer {
 
 @media all and (max-width:800px) {
 
+  section {
+    margin-bottom: 10rem;
+  }
+
   nav {
     height: 10vh;
   }
@@ -743,16 +813,20 @@ footer {
   }
   nav ul li a{
     width: 100%;
-    font-size: 20px;
+    font-size: 2rem;
   }
   #click:checked ~ ul li a{
-    margin-left: 0px;
+    margin-left: 0;
     scrollbar-color: var(--primary-color);
   }
 
   .hero {
     position: relative;
     bottom: 4rem;
+  }
+
+  .gallery-picture {
+    width: 100%;
   }
 
   .footer-column {
@@ -795,6 +869,8 @@ footer {
 }
 
 @media all and (max-width: 400px) {
+  
+
   .cta-primary {
     margin-right: 1rem;
   }
@@ -803,9 +879,12 @@ footer {
     margin-left: 1rem;
   }
 
+  .gallery-picture {
+    margin-inline: 0;
+  }
+
   form {
     margin: 0;
   }
-
   
 }
