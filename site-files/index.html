@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="shortcut icon" href="./images/MCD Logo.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="./images/MCD-Logo.png"/>
     <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     
@@ -27,27 +27,43 @@
 
       <!-- Header -->
 
-      <header>
-        <nav id="head-nav">
-          <div class="logo-container">
-            <img class="logo" src="./images/MCD-Logo.webp" alt="Logo">
-          </div>
-         <input type="checkbox" id="click">
-         <label for="click" class="menu-btn">
-         <i class="fas fa-bars"></i>
-         </label>
-         <ul id="head-ul">
-            <li class="head-li"><a href="#">About</a></li>
-            <li class="head-li"><a href="#">Services</a></li>
-            <li class="head-li"><a href="#">Gallery</a></li>
-            <li class="head-li"><a href="#">Contact</a></li>
-         </ul>
+    <header>
+      <nav id="head-nav">
+        <div class="logo-container">
+          <img class="logo" src="./images/MCD-Logo.webp" alt="Logo">
+        </div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <ul id="head-ul">
+          <li class="head-li"><a href="#">About</a></li>
+          <li class="head-li"><a href="#">Services</a></li>
+          <li class="head-li"><a href="#">Gallery</a></li>
+          <li class="head-li"><a href="#">Contact</a></li>
+          <li>
+            <div class="icons">
+              <a href="https://www.facebook.com/marecardesign" target="_blank">
+                <img class="icon" src="./images/facebook.svg" alt="Facebook Icon">
+              </a>
+              <a href="https://www.instagram.com/marecardesign" target="_blank">
+                <img class="icon" src="./images/instagram.svg" alt="Instagram Icon">
+              </a>
+              <a href="https://www.linkedin.com/in/marecardesigner" target="_blank" >
+                <img class="icon" src="./images/linkedin.svg" alt="LinkedIn Icon">
+              </a>
+              <a class="last-icon" href="mailto:marecardesign@gmail.com" target="_blank">
+                <img class="icon" src="./images/email.svg" alt="Emali Icon">
+              </a>
+            </div>
+          </li>
+        </ul>
       </nav>
-        
-        
-      </header>
+      
+      
+    </header>
 
-      <main>
+    <main>
       <!-- Hero Section -->
 
       <section class="hero">
@@ -55,7 +71,7 @@
         <div class="hero-content">
 
           <div class="hero-text">
-            <p id="spaced-text">AUTOMOTIVE DESIGN</h3>
+            <p id="spaced-text">AUTOMOTIVE DESIGN</p>
             <h1 class="hero-header">Find great automotive art.</h1>
             <p class="hero-paragraph">Get your favorite car drawing  or illustration for a great price!</p>
           </div>
@@ -76,117 +92,115 @@
         </div>
 
       </section>
-    
-    </section>
 
-    <section id="services">
-      <h2 class="section-title">Services</h2>
-      <div class="cards">
-        <div class="card">
-          <h3 class="card-heading">Car Illustrations</h2>
-          <div class="card-icon">
-            <img src="images/Illustrations.webp" alt="Car Illustrations Icon" />
+      <section id="services">
+        <h2 class="section-title">Services</h2>
+        <div class="cards">
+          <div class="card">
+            <h3 class="card-heading">Car Illustrations</h3>
+            <div class="card-icon">
+              <img src="images/Illustrations.webp" alt="Car Illustrations Icon" />
+            </div>
+            <p class="card-p">Get your favorite car drawing  or illustration for a great price!</p>
+            <button class="cta-secondary">More Details</button>
+            </div>
+          <div class="card">
+            <h3 class="card-heading">Car Sketches</h3>
+            <div class="card-icon">
+              <img src="images/Sketches.webp" alt="Car Sketches Icon" />
+            </div>
+            <p class="card-p">Get your favorite car drawing  or illustration for a great price!</p>
+            <button class="cta-secondary">More Details</button>
           </div>
-          <p class="card-p">Get your favorite car drawing  or illustration for a great price!</p>
-          <button class="cta-secondary" id="card-button">More Details</button>
+          <div class="card">
+            <h3 class="card-heading">Car Wrap Design</h3>
+            <div class="card-icon">
+              <img src="images/Wraps.webp" alt="Car Wrap Design" />
+            </div>
+            <p class="card-p">Get your favorite car drawing  or illustration for a great price!</p>
+            <button class="cta-secondary">More Details</button>
           </div>
-        <div class="card">
-          <h3 class="card-heading">Car Sketches</h2>
-          <div class="card-icon">
-            <img src="images/Sketches.webp" alt="Car Sketches Icon" />
-          </div>
-          <p class="card-p">Get your favorite car drawing  or illustration for a great price!</p>
-          <button class="cta-secondary" id="card-button">More Details</button>
         </div>
-        <div class="card">
-          <h3 class="card-heading">Car Wrap Design</h2>
-          <div class="card-icon">
-            <img src="images/Wraps.webp" alt="Car Wrap Design" />
-          </div>
-          <p class="card-p">Get your favorite car drawing  or illustration for a great price!</p>
-          <button class="cta-secondary" id="card-button">More Details</button>
+      </section>
+
+      <section class="gallery">
+        <h2 class="section-title">Gallery</h2>
+        <div class="gallery-pictures-wrapper">
+          <img src="./images/bmw320-virtualtuning.webp" alt="" class="gallery-picture">
+          <img src="./images/bmw320-virtualtuning.webp" alt="" class="gallery-picture">
+          <img src="./images/bmw320-virtualtuning.webp" alt="" class="gallery-picture">
+          <img src="./images/bmw320-virtualtuning.webp" alt="" class="gallery-picture">
         </div>
-      </div>
-    </section>
+        
+        <button class="cta-secondary">View More</button>
+      </section>
 
-    <section class="gallery">
-      <h2 class="section-title">Gallery</h2>
-      <div class="gallery-pictures-wrapper">
-        <img src="./images/bmw320-virtualtuning.webp" alt="" class="gallery-picture">
-        <img src="./images/bmw320-virtualtuning.webp" alt="" class="gallery-picture">
-        <img src="./images/bmw320-virtualtuning.webp" alt="" class="gallery-picture">
-        <img src="./images/bmw320-virtualtuning.webp" alt="" class="gallery-picture">
-      </div>
-      
-      <button class="cta-secondary">View More</button>
-    </section>
+      <section class="contact">
+        <h2 class="section-title">Contact</h2>
+        <div id="form-wrapper">
+          <form netlify>
 
-    <section class="contact">
-      <h2 class="section-title">Contact</h2>
-      <div id="form-wrapper">
-        <form netlify>
+            <div class="form-column">
+              <label for="fname"></label>
+              <input type="text" id="fname" name="name" placeholder="Name">
+              <label for="femail"></label>
+              <input type="text" autocomplete="off" id="femail" name="email" placeholder="Email">
+              
+            </div>
 
-          <div class="form-column">
-            <label for="fname"></label>
-            <input type="text" id="fname" name="name" placeholder="Name">
-            <label for="femail"></label>
-            <input type="text" autocomplete="off" id="femail" name="email" placeholder="Email">
-            
-          </div>
-
-          <div class="form-column" id="form-radio-buttons">
-            <ul class="option-list">
+            <div class="form-column" id="form-radio-buttons">
               <p>Choose your service:</p>
-              <li class="option-item">
-                <input type="radio" id="car-sketching" name="service" value="Car Sketching">
-                <label for="car-sketching">Car Sketching</label><br>
-              </li>
-              <li class="option-item">
-                <input type="radio" id="car-wrap-design" name="service" value="Car Wrap Design">
-                <label for="car-wrap-design">Car Wrap Design</label><br>
-              </li>
-              <li class="option-item">
-                <input type="radio" id="car-illustration" name="service" value="Car illustration">
-                <label for="car-illustration">Car illustration</label>
-              </li>
-              <li class="option-item">
-                <input type="radio" id="visual-car-tuning" name="service" value="Visual Car Tuning">
-                <label for="visual-car-tuning">Visual Car Tuning</label><br>
-              </li>
-              <li class="option-item">
-                <input type="radio" id="web-and-graphic-design" name="service" value="Web and Graphic Design">
-                <label for="web-and-graphic-design">Web and Graphic Design</label><br>
-              </li>
-              <li class="option-item">
-                <input type="radio" id="something-else" name="service" value="Something Else...">
-                <label for="something-else">Something Else...</label>
-              </li>
-            </ul>
+              <ul class="option-list">
+                <li class="option-item">
+                  <input type="radio" id="car-sketching" name="service" value="Car Sketching">
+                  <label for="car-sketching">Car Sketching</label><br>
+                </li>
+                <li class="option-item">
+                  <input type="radio" id="car-wrap-design" name="service" value="Car Wrap Design">
+                  <label for="car-wrap-design">Car Wrap Design</label><br>
+                </li>
+                <li class="option-item">
+                  <input type="radio" id="car-illustration" name="service" value="Car illustration">
+                  <label for="car-illustration">Car illustration</label>
+                </li>
+                <li class="option-item">
+                  <input type="radio" id="visual-car-tuning" name="service" value="Visual Car Tuning">
+                  <label for="visual-car-tuning">Visual Car Tuning</label><br>
+                </li>
+                <li class="option-item">
+                  <input type="radio" id="web-and-graphic-design" name="service" value="Web and Graphic Design">
+                  <label for="web-and-graphic-design">Web and Graphic Design</label><br>
+                </li>
+                <li class="option-item">
+                  <input type="radio" id="something-else" name="service" value="Something Else...">
+                  <label for="something-else">Something Else...</label>
+                </li>
+              </ul>
+              
+            </div>
             
-          </div>
-          
-          <div class="form-column">
-            <label for="fmessage"></label>
-            <textarea id="fmessage" name="message" placeholder="Type Message" contenteditable="true"></textarea>
-              <div class="file-upload">
-                <label for="file-input">
-                  <img src="./images/attachment.svg"/>
-                </label>
-                <input id="file-input" type="file" />
-                <p class="small-paragraph">Add atachment...</p>
-              </div>
-          </div>
-          <div class="form-btn-wrapper">
-            <button class="cta-primary" type="submit" value="Submit">Submit</button>
-          </div>
-        </form>
-      </div>
-    </section>
+            <div class="form-column">
+              <label for="fmessage"></label>
+              <textarea id="fmessage" name="message" placeholder="Type Message" contenteditable="true"></textarea>
+                <div class="file-upload">
+                  <label for="file-input">
+                    <img src="./images/attachment.svg" alt="Attachment Icon"/>
+                  </label>
+                  <input id="file-input" type="file" />
+                  <p class="small-paragraph">Add atachment...</p>
+                </div>
+            </div>
+            <div class="form-btn-wrapper">
+              <button class="cta-primary" type="submit" value="Submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </section>
 
     </main>
   
   </body>
-  <div class="space"></div>
+    <div class="space"></div>
   <footer>
 
     <div class="footer-content">
@@ -194,19 +208,33 @@
       <div class="footer-column" id="first-col">
         <h3 class="footer-headline">MARE CAR DESIGN</h3>
         <div class="icons">
-          <a href="https://www.facebook.com/marecardesign" target="_blank"><img class="icon" src="./images/facebook.svg"></a>
-          <a href="https://www.instagram.com/marecardesign" target="_blank"><img class="icon" src="./images/instagram.svg"></a>
-          <a href="https://www.linkedin.com/in/marecardesigner" target="_blank"><img class="icon" id="last-icon" src="./images/linkedin.svg"></a>
+          <a href="https://www.facebook.com/marecardesign" target="_blank">
+            <img class="icon" src="./images/facebook.svg" alt="Facebook Icon">
+          </a>
+          <a href="https://www.instagram.com/marecardesign" target="_blank">
+            <img class="icon" src="./images/instagram.svg" alt="Instagram Icon">
+          </a>
+          <a href="https://www.linkedin.com/in/marecardesigner" target="_blank" >
+            <img class="last-icon" src="./images/linkedin.svg" alt="LinkedIn Icon">
+          </a>
         </div>
+        <div class="contact-mail">
+          <img class="icon" src="./images/email.svg" alt="Emali Icon">
+            <a href="mailto:marecardesign@gmail.com" target="_blank"></a>
+          <a href="mailto:marecardesign@gmail.com" target="_blank">
+            <p class="mail-label">marecardesign@gmail.com</p>
+          </a>
+        </div>
+        
       </div>
       
       <div class="footer-column">
         <h3 class="footer-title">Navigation</h3>
         <ul class="footer-links">
-          <li a class="footer-link" href="#">About</a></li>
-          <li a class="footer-link" href="#">Services</a></li>
-          <li a class="footer-link" href="#">Gallery</a></li>
-          <li a class="footer-link" href="#">Contact</a></li>
+          <li class="footer-link"><a href="#">About</a></li>
+          <li class="footer-link"><a href="#">Services</a></li>
+          <li class="footer-link"><a href="#">Gallery</a></li>
+          <li class="footer-link"><a href="#">Contact</a></li>
         </ul>
       </div>
 
