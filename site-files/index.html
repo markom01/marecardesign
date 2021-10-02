@@ -20,6 +20,7 @@
   </head>
 
   <body>
+    <a name="top"></a>
 
     <!-- Content -->
 
@@ -30,7 +31,9 @@
     <header>
       <nav id="head-nav">
         <div class="logo-container">
-          <img class="logo" src="./images/MCD-Logo.webp" alt="Logo">
+          <a href="#top">
+            <img class="logo" src="./images/MCD-Logo.png" alt="Logo">
+          </a>
         </div>
         <input type="checkbox" id="click">
         <label for="click" class="menu-btn">
@@ -44,16 +47,16 @@
           <li>
             <div class="icons">
               <a href="https://www.facebook.com/marecardesign" target="_blank">
-                <img class="icon" src="./images/facebook.svg" alt="Facebook Icon">
+                <i class="fab fa-facebook"></i>
               </a>
               <a href="https://www.instagram.com/marecardesign" target="_blank">
-                <img class="icon" src="./images/instagram.svg" alt="Instagram Icon">
+                <i class="fab fa-instagram"></i>
               </a>
               <a href="https://www.linkedin.com/in/marecardesigner" target="_blank" >
-                <img class="icon" src="./images/linkedin.svg" alt="LinkedIn Icon">
+                <i class="fab fa-linkedin-in"></i>
               </a>
               <a class="last-icon" href="mailto:marecardesign@gmail.com" target="_blank">
-                <img class="icon" src="./images/email.svg" alt="Emali Icon">
+                <i class="fas fa-envelope"></i>
               </a>
             </div>
           </li>
@@ -84,11 +87,7 @@
         </div>
 
         <div class="hero-image-wrapper">
-          <img class="hero-image" src="./images/bmw320-virtualtuning.webp" alt="Hero image">
-          <div class="overlay">
-            <p class="overlay-text">BMW 320 Virtual Tuning</p>
-            <button class="overlay-button">View</button>
-          </div>
+          <img class="hero-image" src="./images/bmw320-virtualtuning.jpg" alt="Hero image">
         </div>
 
       </section>
@@ -99,7 +98,7 @@
           <div class="card">
             <h3 class="card-heading">Car Illustrations</h3>
             <div class="card-icon">
-              <img src="images/Illustrations.webp" alt="Car Illustrations Icon" />
+              <img src="images/Illustrations.jpg" alt="Car Illustrations Icon" />
             </div>
             <p class="card-p">Get your favorite car drawing  or illustration for a great price!</p>
             <button class="cta-secondary">More Details</button>
@@ -107,7 +106,7 @@
           <div class="card">
             <h3 class="card-heading">Car Sketches</h3>
             <div class="card-icon">
-              <img src="images/Sketches.webp" alt="Car Sketches Icon" />
+              <img src="images/Sketches.jpg" alt="Car Sketches Icon" />
             </div>
             <p class="card-p">Get your favorite car drawing  or illustration for a great price!</p>
             <button class="cta-secondary">More Details</button>
@@ -115,7 +114,7 @@
           <div class="card">
             <h3 class="card-heading">Car Wrap Design</h3>
             <div class="card-icon">
-              <img src="images/Wraps.webp" alt="Car Wrap Design" />
+              <img src="images/Wraps.jpg" alt="Car Wrap Design" />
             </div>
             <p class="card-p">Get your favorite car drawing  or illustration for a great price!</p>
             <button class="cta-secondary">More Details</button>
@@ -125,13 +124,40 @@
 
       <section class="gallery">
         <h2 class="section-title">Gallery</h2>
-        <div class="gallery-pictures-wrapper">
-          <img src="./images/bmw320-virtualtuning.webp" alt="" class="gallery-picture">
-          <img src="./images/bmw320-virtualtuning.webp" alt="" class="gallery-picture">
-          <img src="./images/bmw320-virtualtuning.webp" alt="" class="gallery-picture">
-          <img src="./images/bmw320-virtualtuning.webp" alt="" class="gallery-picture">
+        <div class="gallery-pictures">
+          <div class="gallery-picture-wrapper">
+            <img class="gallery-picture" src="./images/Charger-Mockup.jpg">
+            <div class="overlay">
+              <h3 class="overlay-heading">Predator Wrap - Dodge Charger</h3>
+              <p class="overlay-category">Car Wraps</p>
+              <button class="overlay-button">View</button>
+            </div>
+          </div>
+          <div class="gallery-picture-wrapper">
+            <img class="gallery-picture" src="./images/bmw320-virtualtuning.jpg">
+            <div class="overlay">
+              <h3 class="overlay-heading">BMW 320</h3>
+              <p class="overlay-category">Virtual Tuning</p>
+              <button class="overlay-button">View</button>
+            </div>
+          </div>
+          <div class="gallery-picture-wrapper">
+            <img class="gallery-picture" src="./images/illustration - Toyota-Corrola-Verso-2010-Brightness.jpg">
+            <div class="overlay">
+              <h3 class="overlay-heading">Illustration - Toyota Verso</h3>
+              <p class="overlay-category">Illustrations</p>
+              <button class="overlay-button">View</button>
+            </div>
+          </div>
+          <div class="gallery-picture-wrapper">
+            <img class="gallery-picture" src="./images/predator-logo.jpg">
+            <div class="overlay">
+              <h3 class="overlay-heading">Predator</h3>
+              <p class="overlay-category">Logo Designs</p>
+              <button class="overlay-button">View</button>
+            </div>
+          </div>
         </div>
-        
         <button class="cta-secondary">View More</button>
       </section>
 
@@ -184,7 +210,7 @@
               <textarea id="fmessage" name="message" placeholder="Type Message" contenteditable="true"></textarea>
                 <div class="file-upload">
                   <label for="file-input">
-                    <img src="./images/attachment.svg" alt="Attachment Icon"/>
+                    <i class="fas fa-paperclip"></i>
                   </label>
                   <input id="file-input" type="file" />
                   <p class="small-paragraph">Add atachment...</p>
@@ -209,18 +235,20 @@
         <h3 class="footer-headline">MARE CAR DESIGN</h3>
         <div class="icons">
           <a href="https://www.facebook.com/marecardesign" target="_blank">
-            <img class="icon" src="./images/facebook.svg" alt="Facebook Icon">
+            <i class="fab fa-facebook"></i>
           </a>
           <a href="https://www.instagram.com/marecardesign" target="_blank">
-            <img class="icon" src="./images/instagram.svg" alt="Instagram Icon">
+            <i class="fab fa-instagram"></i>
           </a>
           <a href="https://www.linkedin.com/in/marecardesigner" target="_blank" >
-            <img class="last-icon" src="./images/linkedin.svg" alt="LinkedIn Icon">
+            <i class="fab fa-linkedin-in"></i>
           </a>
         </div>
         <div class="contact-mail">
-          <img class="icon" src="./images/email.svg" alt="Emali Icon">
-            <a href="mailto:marecardesign@gmail.com" target="_blank"></a>
+          
+          <a href="mailto:marecardesign@gmail.com" target="_blank">
+            <i class="fas fa-envelope"></i>
+          </a>
           <a href="mailto:marecardesign@gmail.com" target="_blank">
             <p class="mail-label">marecardesign@gmail.com</p>
           </a>
