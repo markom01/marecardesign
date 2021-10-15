@@ -34,6 +34,7 @@
   --main-font-size: 1.4rem;
   --scale: 1.25;
   --font-vw: .2vw;
+  --letter-spacing: calc(.5rem + .4vw);
   --p-size: calc(var(--main-font-size) + var(--font-vw));
   --h3-size: calc(var(--p-size) * var(--scale) + var(--font-vw));
   --h2-size: calc(var(--h3-size) * var(--scale) + var(--font-vw));
@@ -131,6 +132,11 @@
   to {
     opacity: 1;
   }
+}
+
+@keyframes slide {
+	0% {transform:translateX(-300%);}
+	100% {transform:translateX(300%);}
 }
 
 
@@ -256,8 +262,9 @@ p {
   margin-block-start: 6rem;
 }
 
-#spaced-text {
-  letter-spacing: calc(.5rem + .4vw);
+.spaced-text {
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
   margin-bottom: 0;
   -webkit-animation: slide-in-left var(--anim-duration) both;
           animation: slide-in-left var(--anim-duration) both;
@@ -446,21 +453,37 @@ li .icons {
 }
 
 .hero-image-wrapper {
+  overflow: hidden;
   display: flex;
   flex: 1;
   margin: auto;
   width: 30vw;
   max-width: 50rem;
   position: relative;
-}
-
-.hero-image {
-  height: auto;
-  width: 100%;
   -webkit-animation: slide-in-right var(--anim-duration) both;
           animation: slide-in-right var(--anim-duration) both;
   box-shadow: var(--button-shadow);
   transition: all .4s;
+  z-index: 0;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+
+}
+
+:is(.hero-image-wrapper, .recommended):after {
+  
+	content:'';
+  top:0;
+	transform:translateX(100%);
+	width:100%;
+	height:100%;
+	position: absolute;
+	z-index:1;
+	animation: slide 6s infinite;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 30%,rgba(128,186,232,0) 70%,rgba(125,185,232,0) 100%);
 }
 
 .cta {
@@ -549,7 +572,7 @@ li .icons {
   margin-block-end: 10rem;
   text-transform: uppercase;
   color: var(--primary-color);
-  letter-spacing: .3rem;
+  letter-spacing: var(--letter-spacing);
   animation: slide-in-left var(--anim-duration) both;
 }
 
@@ -558,10 +581,6 @@ li .icons {
 .card-p, .card .cta-secondary {
   margin: auto;
   padding: 1.5rem;
-}
-
-.card .cta-secondary {
-  padding: .3rem; 
 }
 
 .cards {
@@ -577,8 +596,7 @@ li .icons {
   justify-content: space-between;
   box-shadow: var(--button-shadow);
   border-radius: var(--border-radius);
-  margin: 2rem;
-  margin-block-end: 4rem;
+  margin: 4rem;
   padding: 2rem;
   padding-block: 6rem;
   text-align: center;
@@ -784,7 +802,58 @@ li .icons {
 
 /* Pricing */
 
+.pricing .card {
+  padding-block-start: 0;
+  padding-inline: 0;
+}
 
+.recommended {
+  transform: scale(1.1);
+  background: var(--main-gradient);
+  overflow: hidden;
+}
+.recommended:hover {
+  transform: scale(1.15);
+}
+
+
+
+.recommended>*:not(.cta-secondary), .recommended .pros::before {
+  color: var(--white-color);
+}
+
+.recommended .spaced-text {
+  padding-block: 1rem;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  width: auto;
+  background: var(--white-color);
+  color: var(--primary-color);
+}
+.pros-list {
+  margin-block: 4rem;
+}
+
+.pros {
+  line-height: 2;
+  font-size: var(--s-font-size);
+}
+
+.pros::before {
+  margin-inline-end: 1rem;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f058";
+}
+
+.pros::before, .price {
+  color: var(--primary-color);
+}
+
+sup {
+  font-size: initial;
+  font-weight: 100;
+}
 
 /* Contact */
 
@@ -911,10 +980,6 @@ button[type=submit] {
   display: flex;
   margin: 4rem auto;
   margin-block-start: 1rem;
-}
-
-.space {
-  height: 20rem;
 }
 
 /* Footer */
