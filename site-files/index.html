@@ -44,7 +44,7 @@
           </label>
           <ul id="head-ul">
             <div class="nav-wrapper">
-              <li class="head-li"><a href="#">About</a></li>
+              <li class="head-li"><a href="how-it-works.html">How It Works</a></li>
               <li class="head-li"><a href="#">Services</a></li>
               <li class="head-li"><a href="gallery.html">Gallery</a></li>
               <li class="head-li"><a href="#">Pricing</a></li>
@@ -72,7 +72,7 @@
         
         
       </header>
-      <div class="progress-bar"></div>
+      <!-- <div class="progress-bar"></div> -->
     
 
     <!-- Sections -->
@@ -94,7 +94,7 @@
           <div class="cta">
               <button class="cta-primary">Contact Me</button>
             <a class="btn-wrapper" href="#about">  
-              <button class="cta-secondary" id="hero-cta-secondary">Explore</button>
+              <button class="cta-secondary">Explore</button>
             </a>
           </div>
         </div>
@@ -233,9 +233,11 @@
             <button class="cta-secondary">Buy Now</button>
           </div>
           <div class="recommended card">
-            <p class="spaced-text">recommended</p>
+            <div class="spaced-text-wrapper">
+              <p class="spaced-text">recommended</p>
+            </div>
             <h3 class="card-heading">Advanced</h3>
-            <h2 class="price"><sup>$</sup>15</h2>
+            <h2 id="price"><sup>$</sup>15</h2>
               <ul class="pros-list">
                 <li class="pros">Donec scelerisque laoreet diam sit.</li>
                 <li class="pros">Donec scelerisque laoreet diam sit.</li>
@@ -265,15 +267,13 @@
       <section class="contact">
         <h2 class="section-title">Contact</h2>
         <div id="form-wrapper">
-          <form netlify>
+          <form name="contact" method="POST" enctype="multipart/form-data" data-netlify="true" action="/site-files/form-submission-success-message.html">
 
             <div class="form-column">
               <label for="fname"></label>
               <input type="text" id="fname" name="name" placeholder="Name" required>
               <label for="femail"></label>
               <input type="text" autocomplete="off" id="femail" name="email" placeholder="Email" required>
-              <label for="fcar"></label>
-              <input type="text" autocomplete="off" id="fcar" name="car" placeholder="Vehicle Model" required>
             </div>
 
             <div class="form-column" id="form-radio-buttons">
@@ -307,18 +307,19 @@
                   <label for="something-else">Something Else...</label>
                 </li>
               </ul>
-              
+              <label for="fcar"></label>
+              <input type="text" autocomplete="off" id="fcar" name="car" placeholder="Vehicle Model" required>
             </div>
             
-            <div class="form-column">
+            <div class="form-column upload">
               <label for="fmessage"></label>
               <textarea id="fmessage" name="message" placeholder="Type Message" contenteditable="true"></textarea>
                 <div class="file-upload">
-                  <label for="file-input">
+                  <!-- <label for="file-input">
                     <i class="fas fa-paperclip"></i>
-                  </label>
+                  </label> -->
                   <input id="file-input" type="file" />
-                  <p class="small-paragraph">Add atachment...</p>
+                  <!-- <p class="small-paragraph">Add atachment...</p> -->
                 </div>
             </div>
             <div class="form-btn-wrapper">
