@@ -181,8 +181,8 @@ button {
   justify-content: center;
   cursor: pointer;
   padding: 1rem;
-  width: calc(11.5rem + 1vw);
-  height: calc(4rem + .5vw);
+  inline-size: calc(11.5rem + 1vw);
+  block-size: calc(4rem + .5vw);
   border-radius: var(--border-radius);
   text-transform: uppercase;
   letter-spacing: .2rem;
@@ -208,10 +208,6 @@ input[type="text"], textarea {
   background-color: var(--white-color);
 }
 
-.pros-list li {
-  /* padding-inline-start: 1rem; */
-}
-
 .pros-list li::marker {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -221,8 +217,8 @@ input[type="text"], textarea {
 }
 
 ::-webkit-scrollbar {
-  width: 1.75em;
-  height: 1em;
+  inline-size: 1.75em;
+  block-size: 1em;
 }
 
 ::-webkit-scrollbar-track {
@@ -348,17 +344,17 @@ body {
 
 main {
   margin-block-start: 3rem;
-  width: 85%;
+  inline-size: 100%;
   /* height: 85vh; */
   /*scroll-snap
   overflow: auto;
   scroll-snap-type: y mandatory; */
-  margin-inline: auto;
+  padding-inline: 7.5%;
 }
 
 section {
   display: flex;
-  min-height: 85vh;
+  min-block-size: 85vh;
   /* scroll-snap-align: center; */
   flex-direction: column;
   justify-content: center;
@@ -369,15 +365,15 @@ section {
 /* Header */
 
 header {
-  height: 10rem;
+  block-size: 10rem;
 }
 
 #head-nav {
   position: fixed;
   top: 0;
   display: flex;
-  width: 100vw;
-  height: 10rem;
+  inline-size: 100vw;
+  block-size: 10rem;
   padding-block: 1rem;
   flex-direction: row;
   align-items: center;
@@ -393,7 +389,7 @@ header {
   display: flex;
   margin-inline-start: 7.5vw;
   aspect-ratio: 1;
-  width: 7rem;
+  inline-size: 7rem;
 }
 
 .logo-container a {
@@ -450,7 +446,7 @@ li .icons {
 /*.progress-bar {
   position: relative;
   z-index: -1;
-  width: 100vw;
+  inline-size: 100vw;
   height:100% !important;
   background: rgb(2,0,36);
   background: -moz-linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(38,127,242,1) 0%, rgba(39,110,190,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
@@ -494,8 +490,8 @@ li .icons {
   display: flex;
   flex: 1;
   margin: auto;
-  width: 30vw;
-  max-width: 50rem;
+  inline-size: 30vw;
+  max-inline-size: 50rem;
   position: relative;
   -webkit-animation: slide-in-right var(--anim-duration) both;
           animation: slide-in-right var(--anim-duration) both;
@@ -505,8 +501,8 @@ li .icons {
 }
 
 .hero-image {
-  width: 100%;
-  height: auto;
+  inline-size: 100%;
+  block-size: auto;
 
 }
 
@@ -515,8 +511,8 @@ li .icons {
 	content:'';
   top:0;
 	transform:translateX(100%);
-	width:100%;
-	height:100%;
+	inline-size:100%;
+	block-size:100%;
 	position: absolute;
 	z-index:1;
 	animation: slide 6s infinite;
@@ -525,7 +521,7 @@ li .icons {
 
 .cta {
   display: flex;
-  width: 100%;
+  inline-size: 100%;
 }
 
 .cta-primary {
@@ -558,7 +554,7 @@ li .icons {
 
 .scroll-arrow {
   transform: scale(.7);
-  width: 100%;
+  inline-size: 100%;
   display: flex;
   justify-content: center;
 }
@@ -583,14 +579,14 @@ li .icons {
 }
 
 .about-image {
-  height: 30rem;
-  width: 40rem;
+  block-size: 30rem;
+  inline-size: 40rem;
   object-fit: cover;
   box-shadow: var(--button-shadow);
 }
 
 .about-p {
-  min-width: 30%;
+  min-inline-size: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -641,8 +637,8 @@ li .icons {
   padding-block: 6rem;
   text-align: center;
   transition: all .3s;
-  min-width: 30rem;
-  max-width: calc(30rem + 3vw);
+  min-inline-size: 30rem;
+  max-inline-size: calc(30rem + 3vw);
 }
 
 .card-heading {
@@ -657,8 +653,8 @@ li .icons {
 }
 
 .card-icon img{
-  width: calc(6rem + 1vw);
-  height: calc(6rem + 1vw);
+  inline-size: calc(6rem + 1vw);
+  block-size: calc(6rem + 1vw);
 }
 
 .card .cta-secondary {
@@ -677,11 +673,11 @@ li .icons {
 }
 
 .category-select {
-  width: 50%;
+  inline-size: 50%;
   margin-inline :auto;
   margin-top: 6rem;
   padding: 1rem;
-  min-width: 13rem;
+  min-inline-size: 13rem;
   border-radius: var(--border-radius);
   display: flex;
   flex-wrap: wrap;
@@ -698,8 +694,8 @@ li .icons {
   flex: 1;
   margin: 1rem;
   padding: 2.5rem 1rem;
-  min-width: 10rem;
-  max-width: 15rem;
+  min-inline-size: 10rem;
+  max-inline-size: 15rem;
   border-radius: var(--border-radius);
   box-shadow: var(--button-shadow);
   cursor: pointer;
@@ -708,6 +704,9 @@ li .icons {
 
 .select:hover {
   box-shadow: var(--second-button-shadow);
+  background: var(--main-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .select-p {
@@ -718,9 +717,7 @@ li .icons {
 }
 
 .select-p:hover {
-  background: var(--main-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
 }
 
 .gallery-pictures {
@@ -736,8 +733,8 @@ li .icons {
 
 .category-logo {
   border-radius: 50%;
-  height: 6rem;
-  width: 6rem;
+  block-size: 6rem;
+  inline-size: 6rem;
   margin-top: 10rem;
 }
 
@@ -747,13 +744,13 @@ li .icons {
 
 .category-title {
   align-items: center;
-  width: 100%;
+  inline-size: 100%;
   margin-block-end: 8rem;
   animation: slide-in-left var(--anim-duration) calc(var(--anim-delay) + var(--anim-delay) + var(--anim-delay)) both;
 }
 
 .project-title {
-  width: 100%;
+  inline-size: 100%;
   margin-inline: 3rem;
   margin-block-end: 4rem;
   text-align: center;
@@ -764,14 +761,14 @@ li .icons {
   
   display: flex;
   position: relative;
-  width: 31%;
-  height: 40rem;
+  inline-size: 31%;
+  block-size: 40rem;
   margin: 1rem;
   margin-block-start: 2rem;
 }
 
 .wider {
-  width: 47%;
+  inline-size: 47%;
 }
 
 .first-image {
@@ -799,7 +796,7 @@ li .icons {
 }
 
 .gallery-picture-wrapper img{
-  width: 100%;
+  inline-size: 100%;
   border-radius: var(--border-radius);
   -o-object-fit: cover;
      object-fit: cover;
@@ -813,8 +810,8 @@ li .icons {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   padding: 2.5rem;
   border-radius: var(--border-radius);
   opacity: 0;
@@ -879,7 +876,7 @@ li .icons {
   padding-block: 1rem;
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
-  width: auto;
+  inline-size: auto;
   background: var(--main-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -941,11 +938,11 @@ form {
   align-items: center;
   display: flex;
   flex: 1;
-  height: 100%;
+  block-size: 100%;
   flex-direction: column;
   margin: calc(2rem + .5vw);
   margin-block-end: calc(5rem + 1vw);
-  min-width: 30rem;
+  min-inline-size: 30rem;
 }
 
 .upload {
@@ -964,8 +961,8 @@ form {
 .file-upload label {
   display: flex;
   cursor: pointer;
-  width: 1.5rem;
-  height: 1.5rem;
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
   margin-inline: 1rem;
   margin-block-start: 2.1rem;
   align-items: center;
@@ -1008,21 +1005,21 @@ input[type=text], textarea {
 }
 
 input[type=text] {
-  width: 90%;
-  height: 5rem;
+  inline-size: 90%;
+  block-size: 5rem;
   margin-block-end: 3rem;
   padding: 1rem;
 }
 
 input[type=radio] {
   margin-inline-end: 2rem;
-  width: 1.5rem;
-  height: 1.5rem;
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
 }
 
 textarea {
-  height: 12rem;
-  width: 100%;
+  block-size: 12rem;
+  inline-size: 100%;
   padding: 2rem 1rem;
   resize: none;
 }
@@ -1049,8 +1046,8 @@ p.small-paragraph {
 
 .form-btn-wrapper {
   display: flex;
-  width: 100%;
-  height: 5rem;
+  inline-size: 100%;
+  block-size: 5rem;
   align-self: flex-end;
   justify-content: center;
 }
@@ -1082,8 +1079,8 @@ footer {
 
 .footer-column {
   display: flex;
-  width: calc(80% / 3);
-  min-width: 25rem;
+  inline-size: calc(80% / 3);
+  min-inline-size: 25rem;
   flex-direction: column;
   justify-content: center;
   margin: 2rem;
@@ -1097,20 +1094,20 @@ footer {
 }
 
 .footer-headline {
-  min-width: 18rem;
+  min-inline-size: 18rem;
 }
 
 footer .icons {
   display: flex;
-  width: 10rem;
+  inline-size: 10rem;
   justify-content: space-between;
   margin-block-end: 2rem;
 }
 
 footer .fab, footer .fas {
   cursor: pointer;
-  width: 2rem;
-  height: 2rem;
+  inline-size: 2rem;
+  block-size: 2rem;
   transition: all .2s;
   border-radius: 0;
   color: var(--white-color);
@@ -1144,7 +1141,7 @@ footer .fab, footer .fas {
 
 .footer-text{
   display: flex;
-  min-width: 20rem;
+  min-inline-size: 20rem;
   margin-block-end: 0;
 }
 
@@ -1158,11 +1155,11 @@ footer .fab, footer .fas {
   margin: 2rem;
   margin-inline-start: 0;
   
-  min-width: 8.5rem;
+  min-inline-size: 8.5rem;
 }
 
 .footer-link a {
-  width: max-content;
+  inline-size: max-content;
   cursor: pointer;
 }
 
@@ -1174,7 +1171,7 @@ footer .fab, footer .fas {
 .copyright {
   display: flex;
   justify-content: center;
-  width: 100%;
+  inline-size: 100%;
   margin-bottom: 0;
   color: var(--white-color);
 }
@@ -1185,8 +1182,8 @@ footer .fab, footer .fas {
 
 @media all and (max-width:1200px){
   .gallery-picture-wrapper {
-    width: 47%;
-    height: 30rem;
+    inline-size: 47%;
+    block-size: 30rem;
   }
 }
 
@@ -1212,7 +1209,7 @@ footer .fab, footer .fas {
 
   .hero-content {
     text-align: center;
-    height: 40vh;
+    block-size: 40vh;
     margin-block: 5vw;
     margin-inline-end: 0;
     align-items: center;
@@ -1231,7 +1228,7 @@ footer .fab, footer .fas {
     display: flex;
     flex: none;
     align-self: center;
-    width: 40rem;
+    inline-size: 40rem;
   }
 
   .scroll-arrow {
@@ -1239,7 +1236,7 @@ footer .fab, footer .fas {
   }
 
   textarea#fmessage {
-    height: 14rem;
+    block-size: 14rem;
   }
 
   .footer-column {
@@ -1275,8 +1272,12 @@ footer .fab, footer .fas {
 
 @media all and (max-width:911px) {
 
+  .upload {
+    align-items: center;
+  }
+
   input[type=text], textarea {
-    max-width: 40rem;
+    max-inline-size: 40rem;
     text-align: center;
   }
 
@@ -1316,7 +1317,7 @@ footer .fab, footer .fas {
   }
 
   #head-nav {
-    height: 7rem;
+    block-size: 7rem;
   }
 
   .nav-wrapper {
@@ -1328,8 +1329,8 @@ footer .fab, footer .fas {
   }
 
   .logo-container{
-    height: 5rem;
-    width: 5rem;
+    block-size: 5rem;
+    inline-size: 5rem;
   }
 
   #head-ul {
@@ -1348,8 +1349,8 @@ footer .fab, footer .fas {
     position: relative;
     transform: translateX(110vw);
     background-color: var(--white-color);
-    height: 95vh;
-    width: 100%;
+    block-size: 95vh;
+    inline-size: 100%;
     text-align: center;
     transition: all .3s ease;
     z-index: 3;
@@ -1358,19 +1359,19 @@ footer .fab, footer .fas {
     transform: translateX(0vw);
   }
   nav li{
-    width: 100%;
+    inline-size: 100%;
     margin: 1rem 0;
   }
   nav li a{
-    width: 100%;
+    inline-size: 100%;
   }
 
   .nav-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100%;
-    height: 70%;
+    inline-size: 100%;
+    block-size: 70%;
     padding-block-start: 15rem;
     padding-block-end: 3rem;
   }
@@ -1386,8 +1387,8 @@ footer .fab, footer .fas {
   }
 
   .icons a {
-    height: 2.1rem;
-    width: 2.1rem;
+    block-size: 2.1rem;
+    inline-size: 2.1rem;
     padding: 0;
   }
 
@@ -1405,8 +1406,8 @@ footer .fab, footer .fas {
   }
 
   .category-logo {
-    height: 5rem;
-    width: 5rem;
+    block-size: 5rem;
+    inline-size: 5rem;
   }
 
   #title {
@@ -1419,9 +1420,9 @@ footer .fab, footer .fas {
   }
 
   .gallery-picture-wrapper {
-    height: auto;
-    width: 90%;
-    max-height: 40rem;
+    block-size: auto;
+    inline-size: 90%;
+    max-block-size: 40rem;
   }
 
   footer {
@@ -1437,7 +1438,7 @@ footer .fab, footer .fas {
 @media all and (max-width:650px) {
 
   input[type=text], textarea {
-    max-width: 40rem;
+    max-inline-size: 40rem;
   }
 
  
@@ -1450,16 +1451,16 @@ footer .fab, footer .fas {
   }
 
   .hero-content {
-    height: 30vh;
+    block-size: 30vh;
   }
   
   .hero-image-wrapper {
-    width: 100%;
+    inline-size: 100%;
   }
 
   .hero-image {
-    width: 100%;
-    height: auto;
+    inline-size: 100%;
+    block-size: auto;
   }
 
   .scroll-arrow {
@@ -1467,19 +1468,19 @@ footer .fab, footer .fas {
   }
 
   .about-image {
-    width: 70vw;
-    height: auto;
+    inline-size: 70vw;
+    block-size: auto;
   }
 
   .card  {
     margin-inline: 0;
-    min-width: 80%;
+    min-inline-size: 80%;
   }
 
   .gallery-picture-wrapper {
-    width: 90%;
-    height: auto;
-    max-height: initial;
+    inline-size: 90%;
+    block-size: auto;
+    max-block-size: initial;
   }
 
   .overlay-heading {
@@ -1488,11 +1489,11 @@ footer .fab, footer .fas {
 
   .form-column {
     margin: 2rem 0;
-    min-width: 20rem;
+    min-inline-size: 20rem;
   }
 
   input[type=text], textarea {
-    max-width: 30rem;
+    max-inline-size: 30rem;
     text-align: center;
   }
 
@@ -1513,7 +1514,7 @@ footer .fab, footer .fas {
   }
 
   input[type=text] {
-    height: 4rem;
+    block-size: 4rem;
   }
 
 }
