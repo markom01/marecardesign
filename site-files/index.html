@@ -20,7 +20,7 @@
   </head>
 
   <body>
-    <a name="top"></a>
+    <a id="top"></a>
 
 
 
@@ -35,7 +35,7 @@
         <nav id="head-nav">
           <div class="logo-container">
             <a href="#top">
-              <img class="logo" src="https://bit.ly/3AuDRiH" alt="Logo">
+              <img class="logo" src="./images/MCD-Logo.png" alt="Logo">
             </a>
           </div>
           <input type="checkbox" id="click">
@@ -44,11 +44,9 @@
           </label>
           <ul id="head-ul">
             <div class="nav-wrapper">
-              <li class="head-li"><a href="how-it-works.html">How It Works</a></li>
-              <li class="head-li"><a href="#">Services</a></li>
               <li class="head-li"><a href="gallery.html">Gallery</a></li>
-              <li class="head-li"><a href="#">Pricing</a></li>
-              <li class="head-li"><a href="#">Contact</a></li>
+              <li class="head-li"><a href="#pricing">Pricing</a></li>
+              <li class="head-li"><a href="#contact-form">Contact</a></li>
             </div>
             
             <li>
@@ -92,15 +90,13 @@
             <p class="hero-paragraph">Get your favorite car drawing  or illustration for a great price!</p>
           </div>
           <div class="cta">
-              <button class="cta-primary">Contact Me</button>
-            <a class="btn-wrapper" href="#about">  
-              <button class="cta-secondary">Explore</button>
-            </a>
+              <a class="button cta-primary" href="#contact-form">Contact Me</a>  
+              <a class="button cta-secondary" href="gallery.html">Explore</a>
           </div>
         </div>
 
         <div class="hero-image-wrapper">
-          <img class="hero-image" src="https://bit.ly/2YyAUAP" alt="Hero image">
+          <img class="hero-image" src="./images/BMW-320.jpg" alt="Hero image">
         </div>
         <a class="scroll-arrow" href="#about">
           <svg width="79" height="26" viewBox="0 0 79 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -126,42 +122,43 @@
         <h2 id="about" class="section-title">About</h2>
         <div class="about-content">
           <div class="about-image-wrapper">
-            <img class="about-image" src="https://bit.ly/3FN40Nm" alt="About Image">
+            <img class="about-image" src="./images/Charger-Left-Side-View.jpg" alt="About Image">
           </div>
-          <p class="about-p">We will make your car stand out with our wrap designs and visual tuning,<br> sketch or digitally illustrate it to create a memory for a whole life.</p>
+          <p class="about-p">We will make your car stand out with our wrap designs and visual tuning,
+            <br> sketch or digitally illustrate it to create a memory for a whole life.</p>
         </div>
-        <button class="cta-secondary">More Details</button>
+        <a class="button cta-secondary" href="#services">View Services</a>
         
       </section>
 
       <!-- Services -->
 
-      <section id="services">
+      <section class="services">
         <h2 class="section-title">Services</h2>
-        <div class="cards">
+        <div class="cards" id="services">
           <div class="card">
             <h3 class="card-heading">Car Illustrations</h3>
             <div class="card-icon">
-              <img src="https://bit.ly/2YyKJyi" alt="Car Illustrations Icon" />
+              <img src="./images/Illustrations.jpg" alt="Car Illustrations Icon" />
             </div>
             <p class="card-p">Get your favorite car drawing  or illustration for a great price!</p>
-            <button class="cta-secondary">More Details</button>
+            <a class="button cta-secondary" href="#pricing">View Pricing</a>
             </div>
           <div class="card">
             <h3 class="card-heading">Car Sketches</h3>
             <div class="card-icon">
-              <img src="https://bit.ly/2YAE1rg" alt="Car Sketches Icon" />
+              <img src="./images/Sketches.jpg" alt="Car Sketches Icon" />
             </div>
             <p class="card-p">Get your favorite car drawing  or illustration for a great price!</p>
-            <button class="cta-secondary">More Details</button>
+            <a class="button cta-secondary" href="#pricing">View Pricing</a>
           </div>
           <div class="card">
             <h3 class="card-heading">Car Wrap Design</h3>
             <div class="card-icon">
-              <img src="https://bit.ly/2YEItpu" alt="Car Wrap Design" />
+              <img src="./images/Wraps.jpg" alt="Car Wrap Design Icon" />
             </div>
             <p class="card-p">Get your favorite car drawing  or illustration for a great price!</p>
-            <button class="cta-secondary">More Details</button>
+            <a class="button cta-secondary" href="#pricing">View Pricing</a>
           </div>
         </div>
       </section>
@@ -170,67 +167,56 @@
 
       <section class="gallery">
         <h2 class="section-title">Gallery</h2>
-        <div class="gallery-pictures">
+        <div class="gallery-pictures" id="gallery">
           <div class="gallery-picture-wrapper">
-            <img class="gallery-picture" src="https://bit.ly/3DsYY6Y">
+            <img class="gallery-picture" src="./images/Charger-Mockup.jpg" alt="Predator Wrap Mockup">
             <div class="overlay">
               <h3 class="overlay-heading">Predator Wrap</h3>
-              <p class="overlay-category">Car Wraps</p>
-              <button class="overlay-button">View</button>
+              <a href="gallery.html#wrap-designs" class="overlay-category">Car Wraps</a>
+              <a href="./images/Charger-Mockup.jpg" target=”_blank” class="button transparent-button">View</a>
             </div>
           </div>
           <div class="gallery-picture-wrapper">
-            <img class="gallery-picture" src="https://bit.ly/2YyAUAP">
+            <img class="gallery-picture" src="./images/BMW-320.jpg" alt="BMW 320 Visual Tuning">
             <div class="overlay">
               <h3 class="overlay-heading">BMW 320</h3>
-              <p class="overlay-category">Virtual Tuning</p>
-              <button class="overlay-button">View</button>
+              <a href="gallery.html#visual-tuning" class="overlay-category">Visual Tuning</a>
+              <a href="./images/BMW-320.jpg" target=”_blank” class="button transparent-button">View</a>
             </div>
           </div>
           <div class="gallery-picture-wrapper">
-            <img class="gallery-picture" src="https://bit.ly/3oN3B7C">
+            <img class="gallery-picture" src="./images/Toyota-Corrola-Verso-2010.jpg" alt="Toyota Verso Illustration">
             <div class="overlay">
               <h3 class="overlay-heading">Toyota Verso</h3>
-              <p class="overlay-category">Illustrations</p>
-              <button class="overlay-button">View</button>
+              <a href="gallery.html#illustrations" class="overlay-category">Illustrations</p>
+              <a href="./images/Toyota-Corrola-Verso-2010.jpg" target=”_blank” class="button transparent-button">View</a>
             </div>
           </div>
           <div class="gallery-picture-wrapper">
-            <img class="gallery-picture" src="https://bit.ly/3vbVenf">
+            <img class="gallery-picture" src="./images/Opel-Astra-GTC.jpg" alt="Opel Astra GTC Sketch">
             <div class="overlay">
               <h3 class="overlay-heading">Opel Astra GTC</h3>
-              <p class="overlay-category">Sketches</p>
-              <button class="overlay-button">View</button>
-            </div>
-          </div>
-          <div class="gallery-picture-wrapper">
-            <img class="gallery-picture" src="https://bit.ly/3v026E0">
-            <div class="overlay">
-              <h3 class="overlay-heading">Predator</h3>
-              <p class="overlay-category">Logo Designs</p>
-              <button class="overlay-button">View</button>
+              <a href="gallery.html/#sketches" class="overlay-category">Sketches</p>
+              <a href="./images/Opel-Astra-GTC.jpg" target=”_blank” class="button transparent-button">View</a>
             </div>
           </div>
         </div>
-        <button class="cta-secondary">View More</button>
+        <a class="button cta-secondary" href="gallery.html">View More</a>
       </section>
 
       <!-- Pricing -->
 
       <section class="pricing">
         <h2 class="section-title">Pricing</h2>
-        <div class="cards">
+        <div class="cards" id="pricing">
           <div class="card">
             <h3 class="card-heading">Basic</h3>
             <h2 class="price"><sup>$</sup>5</h2>
             <ul class="pros-list">
-              <li class="pros">Donec scelerisque laoreet diam sit.</li>
-              <li class="pros">Donec scelerisque laoreet diam sit.</li>
-              <li class="pros">Donec scelerisque laoreet diam sit.</li>
-              <li class="pros">Donec scelerisque laoreet diam sit.</li>
-              <li class="pros">Donec scelerisque laoreet diam sit.</li>
+              <li class="pros">Sketch - One Side</li>
+              <li class="pros">Virtual Tuning - One Side</li>
             </ul>
-            <button class="cta-secondary">Buy Now</button>
+            <a class="button cta-secondary" href="#contact-form">Buy Now</a>
           </div>
           <div class="recommended card">
             <div class="spaced-text-wrapper">
@@ -239,25 +225,23 @@
             <h3 class="card-heading">Advanced</h3>
             <h2 id="price"><sup>$</sup>15</h2>
               <ul class="pros-list">
-                <li class="pros">Donec scelerisque laoreet diam sit.</li>
-                <li class="pros">Donec scelerisque laoreet diam sit.</li>
-                <li class="pros">Donec scelerisque laoreet diam sit.</li>
-                <li class="pros">Donec scelerisque laoreet diam sit.</li>
-                <li class="pros">Donec scelerisque laoreet diam sit.</li>
+                <li class="pros">Illustration - One Side</li>
+                <li class="pros">Sketch - Two Sides</li>
+                <li class="pros">Virtual Tuning - Two Sides</li>
+                <li class="pros">Wrap Design - Two Sides</li>
               </ul>
-            <button class="cta-secondary">Buy Now</button>
+            <a class="button cta-secondary" href="#contact-form">Buy Now</a>
           </div>
           <div class="card">
             <h3 class="card-heading">Premium</h3>
             <h2 class="price"><sup>$</sup>35</h2>
             <ul class="pros-list">
-              <li class="pros">Donec scelerisque laoreet diam sit.</li>
-              <li class="pros">Donec scelerisque laoreet diam sit.</li>
-              <li class="pros">Donec scelerisque laoreet diam sit.</li>
-              <li class="pros">Donec scelerisque laoreet diam sit.</li>
-              <li class="pros">Donec scelerisque laoreet diam sit.</li>
+              <li class="pros">Illustration - Two Sides</li>
+              <li class="pros">Sketch - Four Sides</li>
+              <li class="pros">Virtual Tuning - Four Sides</li>
+              <li class="pros">Wrap Design - Four Sides</li>
             </ul>
-            <button class="cta-secondary">Buy Now</button>
+            <a class="button cta-secondary" href="#contact-form">Buy Now</a>
           </div>
         </div>
       </section>
@@ -266,7 +250,7 @@
         
       <section class="contact">
         <h2 class="section-title">Contact</h2>
-        <div id="form-wrapper">
+        <div id="contact-form">
           <form name="contact" method="POST" enctype="multipart/form-data" data-netlify="true" action="/site-files/form-submission-success-message.html">
 
             <div class="form-column">
@@ -299,31 +283,41 @@
                   <label for="visual-car-tuning">Visual Car Tuning</label><br>
                 </li>
                 <li class="option-item">
-                  <input type="radio" id="web-and-graphic-design" name="service" value="Web and Graphic Design">
-                  <label for="web-and-graphic-design">Web and Graphic Design</label><br>
-                </li>
-                <li class="option-item">
                   <input type="radio" id="something-else" name="service" value="Something Else...">
                   <label for="something-else">Something Else...</label>
                 </li>
               </ul>
-              <label for="fcar"></label>
-              <input type="text" autocomplete="off" id="fcar" name="car" placeholder="Vehicle Model" required>
+
+              
+              <div class="pricing-plans-select">
+                <label for="plans">Choose a pricing plan:</label>
+                <select id="plans">
+                  <option selected value="placeholder"></option>
+                  <option value="basic">Basic | $5</option>
+                  <option value="advanced">Advanced | $15</option>
+                  <option value="premium">Premium | $35</option>
+                </select>
+              </div>
+              
+              
             </div>
             
             <div class="form-column upload">
+              <label for="fcar"></label>
+              <input type="text" autocomplete="off" id="fcar" name="car" placeholder="Vehicle Model" required>
               <label for="fmessage"></label>
               <textarea id="fmessage" name="message" placeholder="Type Message" contenteditable="true"></textarea>
                 <div class="file-upload">
-                  <!-- <label for="file-input">
+                  <label for="file-input">
                     <i class="fas fa-paperclip"></i>
-                  </label> -->
-                  <input id="file-input" type="file" />
-                  <!-- <p class="small-paragraph">Add atachment...</p> -->
+                    <p class="small-paragraph">Add car images...</p>
+                  </label>
+                  <input id="file-input" type="file" class="hidden"/>
+                  
                 </div>
             </div>
             <div class="form-btn-wrapper">
-              <button class="cta-primary" type="submit" value="Submit">Submit</button>
+              <a class="button cta-primary" type="submit" value="Submit">Submit</a>
             </div>
           </form>
         </div>
@@ -367,24 +361,34 @@
         
         <div class="footer-column">
           <h3 class="footer-title">Navigation</h3>
-          <ul class="footer-links">
-            <li class="footer-link"><a href="#">About</a></li>
-            <li class="footer-link"><a href="#">Services</a></li>
-            <li class="footer-link"><a href="#">Gallery</a></li>
-            <li class="footer-link"><a href="#">Contact</a></li>
-          </ul>
+          <div class="links-wrapper">
+            <ul class="links home-links">
+            <li class="footer-link page-link"><a href="#top">Home</a></li>
+            <li class="footer-link"><a href="#about">About</a></li>
+            <li class="footer-link"><a href="#services">Services</a></li>
+            <li class="footer-link"><a href="#gallery">Gallery</a></li>
+            <li class="footer-link"><a href="#pricing">Pricing</a></li>
+            <li class="footer-link"><a href="#contact-form">Contact</a></li>
+            </ul>
+            <ul class="links gallery-links">
+              <li class="footer-link page-link"><a href="gallery.html">Gallery</a></li>
+              <li class="footer-link"><a href="gallery.html#wrap-designs">Wraps</a></li>
+              <li class="footer-link"><a href="gallery.html#illustrations">Illustrations</a></li>
+              <li class="footer-link"><a href="gallery.html#sketches">Sketches</a></li>
+              <li class="footer-link"><a href="gallery.html#visual-tuning">Tuning</a></li>
+            </ul>
+          </div>
+          
         </div>
   
         <div class="footer-column">
           <h3 class="footer-title">About</h3>
-          <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Aenean felis diam, porta ut quam in, fringilla finibus leo.
-            Maecenas sollicitudin turpis eget eros mollis condimentum.
-            Nam sagittis tellus eros, at eleifend arcu interdum vel.
-            Proin efficitur sodales ex, sed tincidunt ex pharetra vel.
-          </p>        
+          <p class="footer-text">We will make your car stand out with our wrap designs and visual tuning,
+            sketch or digitally illustrate it to create a memory for a whole life.
+          </p>
+          <a href="index.html#contact-form" class="button transparent-button">Contact Us</a>             
         </div>
-  
+
       </div>
 
       <p class="copyright">&copy; 2021 Marko Meseldžija</p>

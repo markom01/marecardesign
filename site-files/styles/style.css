@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 
   Table of Contents
@@ -175,7 +176,7 @@
 
 /* UI */
 
-button {
+.button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -195,7 +196,7 @@ button {
   transition: all .3s ease;
 }
 
-button:is(:hover, :focus) {
+.button:is(:hover, :focus) {
   outline: none;
   box-shadow: var(--second-button-shadow);
 }
@@ -206,14 +207,6 @@ img {
 
 input[type="text"], textarea {
   background-color: var(--white-color);
-}
-
-.pros-list li::marker {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f054";
-  transform: translateX(1rem);
-  color: var(--primary-color);
 }
 
 ::-webkit-scrollbar {
@@ -388,7 +381,7 @@ header {
 .logo-container {
   display: flex;
   margin-inline-start: 7.5vw;
-  aspect-ratio: 1;
+  aspect-ratio: 1 / 1;
   inline-size: 7rem;
 }
 
@@ -430,6 +423,7 @@ nav li a:is(:hover, :focus, :active), .head-li.current a{
   font-size: 2.6rem;
   background: var(--main-gradient);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: pointer;
   display: none;
@@ -538,6 +532,7 @@ li .icons {
 .cta-secondary {
   background: var(--main-gradient);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: slide-in-left var(--anim-duration) .7s both;
           animation: slide-in-left var(--anim-duration) .7s both;
@@ -547,7 +542,7 @@ li .icons {
   color: var(--secondary-color);
 }
 
-.btn-wrapper {
+.cta .cta-secondary {
   position: relative;
   transform: translateX(3rem);
 }
@@ -607,14 +602,15 @@ li .icons {
   text-transform: uppercase;
   background: var(--main-gradient);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: var(--letter-spacing);
   animation: slide-in-left var(--anim-duration) both;
 }
 
-.card-heading,
+
 .card-icon,
-.card-p, .card .cta-secondary {
+.card-p, .card, .card .cta-secondary {
   margin-block: 2.5rem;
   padding: 1.5rem;
 }
@@ -655,10 +651,12 @@ li .icons {
 .card-icon img{
   inline-size: calc(6rem + 1vw);
   block-size: calc(6rem + 1vw);
+  border-radius: 50%;
 }
 
 .card .cta-secondary {
   margin-inline: auto;
+  justify-self: flex-end;
 }
 
 .card:is(:hover, :focus) {
@@ -676,7 +674,7 @@ li .icons {
   inline-size: 50%;
   margin-inline :auto;
   margin-top: 6rem;
-  padding: 1rem;
+  padding: .5rem;
   min-inline-size: 13rem;
   border-radius: var(--border-radius);
   display: flex;
@@ -693,31 +691,24 @@ li .icons {
   justify-content: center;
   flex: 1;
   margin: 1rem;
-  padding: 2.5rem 1rem;
   min-inline-size: 10rem;
   max-inline-size: 15rem;
   border-radius: var(--border-radius);
   box-shadow: var(--button-shadow);
   cursor: pointer;
   transition: .3s;
+  padding: 2rem 1rem;
+  text-align: center;
+  line-height: 1.2;
+  white-space: nowrap;
+  transition: .3s;
+  font-size: var(--p-size);
+  color: var(--p-color);
 }
 
 .select:hover {
   box-shadow: var(--second-button-shadow);
-  background: var(--main-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.select-p {
-  text-align: center;
-  line-height: 1.2;
-  white-space: nowrap;
-  transition: .3s forwards;
-}
-
-.select-p:hover {
-
+  color: var(--primary-color);
 }
 
 .gallery-pictures {
@@ -818,7 +809,7 @@ li .icons {
   transition: .3s;
 }
 
-.overlay-button {
+.transparent-button {
   margin-block-start: 2rem;
   color: var(--white-color);
   border: .2rem solid var(--white-color);
@@ -845,7 +836,6 @@ li .icons {
 }
 
 .gallery .cta-secondary {
-  display: block;
   margin-inline: auto;
   margin-block-start: 6rem;
 }
@@ -864,7 +854,11 @@ li .icons {
   transform: scale(1.15);
 }
 
-.recommended>*:not(.cta-secondary), .recommended .pros::marker {
+.recommended .card-heading {
+  margin-top: 3rem;
+}
+
+.recommended>*:not(.cta-secondary) {
   color: var(--white-color);
 }
 
@@ -879,6 +873,7 @@ li .icons {
   inline-size: auto;
   background: var(--main-gradient);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .pros-list {
@@ -887,6 +882,7 @@ li .icons {
 }
 
 .pros {
+  min-width: 80%;
   display: inline-block;
   line-height: 2;
   font-size: var(--s-font-size);
@@ -896,6 +892,7 @@ li .icons {
 .price {
   background: var(--main-gradient);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -952,7 +949,11 @@ form {
 .form-column p {
   text-align: left;
 }
-/* 
+
+.hidden {
+  display: none;
+}
+
 .file-upload {
   display: flex;
   align-self: flex-start;
@@ -961,12 +962,11 @@ form {
 .file-upload label {
   display: flex;
   cursor: pointer;
-  inline-size: 1.5rem;
   block-size: 1.5rem;
   margin-inline: 1rem;
   margin-block-start: 2.1rem;
   align-items: center;
-} */
+}
 
 .fas, .fab {
   transition: .3s;
@@ -974,11 +974,12 @@ form {
   position: relative;
 }
 
-/* .fa-paperclip {
+ .fa-paperclip {
   background: var(--main-gradient);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-}*/
+}
 
 .choose-par {
   margin-block-end: 2rem;
@@ -993,8 +994,9 @@ form {
   margin-block-end: 1rem;
 }
 
-input[type=text], textarea {
+input[type=text], textarea, #plans {
   display: flex;
+  max-inline-size: 40rem;
   font-size: var(--s-font-size);
   color: var(--p-color);
   border-style: none;
@@ -1004,8 +1006,8 @@ input[type=text], textarea {
   transition: .3s;
 }
 
-input[type=text] {
-  inline-size: 90%;
+input[type=text], #plans {
+  inline-size: 100%;
   block-size: 5rem;
   margin-block-end: 3rem;
   padding: 1rem;
@@ -1019,6 +1021,7 @@ input[type=radio] {
 
 textarea {
   block-size: 12rem;
+  min-inline-size: 4rem;
   inline-size: 100%;
   padding: 2rem 1rem;
   resize: none;
@@ -1032,15 +1035,31 @@ label {
   font-size: var(--s-font-size);
   color: var(--p-color);
 }
- 
+
+.pricing-plans-select {
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-plans-select label {
+  font-size: var(--p-size);
+  margin-block-end: 2rem;
+}
+
+#plans {
+  block-size: 4rem;
+  background: var(--white-color);
+}
+/*  
 input[type=file] {
   display: flex;
   align-self: start;
   margin-top: 2rem;
-}
+} */
 
 p.small-paragraph {
-  margin-block-start: 2rem;
+  inline-size: max-content;
+  margin-inline-start: 1rem;
   font-size: var(--s-font-size);
 }
 
@@ -1052,7 +1071,7 @@ p.small-paragraph {
   justify-content: center;
 }
 
-button[type=submit] {
+a[type=submit] {
   display: flex;
   margin: 4rem auto;
   margin-block-start: 1rem;
@@ -1086,6 +1105,11 @@ footer {
   margin: 2rem;
 }
 
+.links-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
 .footer-headline, .footer-title {
   display: flex;
   color: var(--white-color);
@@ -1095,6 +1119,10 @@ footer {
 
 .footer-headline {
   min-inline-size: 18rem;
+}
+
+.home-links {
+  margin-inline-end: 2rem;
 }
 
 footer .icons {
@@ -1145,10 +1173,19 @@ footer .fab, footer .fas {
   margin-block-end: 0;
 }
 
+.footer-column .transparent-button {
+  margin-block-start: 4rem;
+}
+
 .footer-link a, .footer-text, #copyright, .mail-label {
   color:var(--lighter-text-color);
   font-size: var(--main-font-size);
   transition: .3s;
+}
+
+.page-link a{
+  font-size: var(--p-size);
+  color: var(--white-color);
 }
 
 .footer-link {
@@ -1179,6 +1216,17 @@ footer .fab, footer .fas {
 
 /* Media Queries */
 
+
+@media all and (max-width:1357px) {
+  .upload {
+    align-items: center;
+  }
+  textarea {
+    inline-size: 90%;
+    block-size: 10rem;
+    max-inline-size: unset;
+  }
+}
 
 @media all and (max-width:1200px){
   .gallery-picture-wrapper {
@@ -1219,7 +1267,7 @@ footer .fab, footer .fas {
     justify-content: space-evenly;
   }
 
-  .btn-wrapper {
+  .cta .cta-secondary {
     position: relative;
     transform: translateX(0);
   }
@@ -1276,8 +1324,11 @@ footer .fab, footer .fas {
     align-items: center;
   }
 
-  input[type=text], textarea {
-    max-inline-size: 40rem;
+  input[type=text] {
+    text-align: center;
+  }
+
+  .choose-par p, #plans{
     text-align: center;
   }
 
@@ -1425,6 +1476,10 @@ footer .fab, footer .fas {
     max-block-size: 40rem;
   }
 
+  textarea {
+    width: 40rem;
+  }
+
   footer {
     padding-block: 5rem;
   }
@@ -1436,12 +1491,9 @@ footer .fab, footer .fas {
 }
 
 @media all and (max-width:650px) {
-
-  input[type=text], textarea {
-    max-inline-size: 40rem;
+  textarea {
+    width: 100%;
   }
-
- 
 }
 
 @media all and (max-width: 530px){
@@ -1497,6 +1549,10 @@ footer .fab, footer .fas {
     text-align: center;
   }
 
+  .file-upload {
+    margin-block-end: 2rem;
+  }  
+
 }
 
 @media all and (max-width: 400px) {
@@ -1515,6 +1571,10 @@ footer .fab, footer .fas {
 
   input[type=text] {
     block-size: 4rem;
+  }
+
+  .home-links {
+    margin-inline-end: 0;
   }
 
 }
