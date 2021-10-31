@@ -1,3 +1,18 @@
+<!--
+
+  Home Page
+
+    Header
+    Hero
+    About
+    Services
+    Gallery
+    Pricing
+    Contact
+    Footer
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
   
@@ -5,6 +20,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="We will make your car stand out with our wrap designs and visual tuning,
+    sketch or digitally illustrate it to create a memory for a whole life.">
+    <meta name="keywords" content="Automotive, Car Design, Car Illustration, Car Wrap Design, Car Sketch, Visual Car Tuning">
+    <meta name="author" content="Marko Meseldžija">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,25 +33,21 @@
     <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     
-    
     <title>Mare Car Design | Home</title>
-
+    <meta name="google-site-verification" content="VTEy3pIsQYqP5olZlccPTb0mRuZ0sS3jwpzZhfykVMc" />
   </head>
 
   <body>
     <a id="top"></a>
 
+  <!-- Content -->
 
-
-    <!-- Content -->
-
-
-    
       <!-- Header -->
 
-
       <header>
+
         <nav id="head-nav">
+
           <div class="logo-container">
             <a href="#top">
               <img class="logo" src="./images/MCD-Logo.png" alt="Logo">
@@ -42,13 +57,13 @@
           <label for="click" class="menu-btn">
             <i class="fas fa-bars"></i>
           </label>
+
           <ul id="head-ul">
             <div class="nav-wrapper">
               <li class="head-li"><a href="gallery.html">Gallery</a></li>
               <li class="head-li"><a href="#pricing">Pricing</a></li>
               <li class="head-li"><a href="#contact-form">Contact</a></li>
-            </div>
-            
+            </div>  
             <li>
               <div class="icons">
                 <a href="https://www.facebook.com/marecardesign" target="_blank">
@@ -66,24 +81,20 @@
               </div>
             </li>
           </ul>
+
         </nav>
         
-        
       </header>
-      <!-- <div class="progress-bar"></div> -->
-    
 
     <!-- Sections -->
     
-
     <main>  
       
-      <!-- Hero Section -->
+      <!-- Hero -->
 
       <section class="hero">
 
         <div class="hero-content">
-
           <div class="hero-text">
             <p class="spaced-text">automotive design</p>
             <h1 class="hero-header">Find great automotive art.</h1>
@@ -94,7 +105,6 @@
               <a class="button cta-secondary" href="gallery.html">Explore</a>
           </div>
         </div>
-
         <div class="hero-image-wrapper">
           <img class="hero-image" src="./images/BMW-320.jpg" alt="Hero image">
         </div>
@@ -114,18 +124,20 @@
             </defs>
           </svg>                       
         </a>
+
       </section>
 
       <!-- About -->
       
       <section class="about">
+
         <h2 id="about" class="section-title">About</h2>
         <div class="about-content">
           <div class="about-image-wrapper">
             <img class="about-image" src="./images/Charger-Left-Side-View.jpg" alt="About Image">
           </div>
           <p class="about-p">We will make your car stand out with our wrap designs and visual tuning,
-            <br> sketch or digitally illustrate it to create a memory for a whole life.</p>
+           <br> sketch or digitally illustrate it to create a memory for a whole life.</p>
         </div>
         <a class="button cta-secondary" href="#services">View Services</a>
         
@@ -134,6 +146,7 @@
       <!-- Services -->
 
       <section class="services">
+
         <h2 class="section-title">Services</h2>
         <div class="cards" id="services">
           <div class="card">
@@ -161,12 +174,15 @@
             <a class="button cta-secondary" href="#pricing">View Pricing</a>
           </div>
         </div>
+
       </section>
 
       <!-- Gallery -->
 
       <section class="gallery">
+
         <h2 class="section-title">Gallery</h2>
+
         <div class="gallery-pictures" id="gallery">
           <div class="gallery-picture-wrapper">
             <img class="gallery-picture" src="./images/Charger-Mockup.jpg" alt="Predator Wrap Mockup">
@@ -202,16 +218,19 @@
           </div>
         </div>
         <a class="button cta-secondary" href="gallery.html">View More</a>
+      
       </section>
 
       <!-- Pricing -->
 
       <section class="pricing">
+
         <h2 class="section-title">Pricing</h2>
+
         <div class="cards" id="pricing">
           <div class="card">
             <h3 class="card-heading">Basic</h3>
-            <h2 class="price"><sup>$</sup>5</h2>
+            <h2 class="price"><sup>$</sup>10</h2>
             <ul class="pros-list">
               <li class="pros">Sketch - One Side</li>
               <li class="pros">Virtual Tuning - One Side</li>
@@ -223,7 +242,7 @@
               <p class="spaced-text">recommended</p>
             </div>
             <h3 class="card-heading">Advanced</h3>
-            <h2 id="price"><sup>$</sup>15</h2>
+            <h2 id="price"><sup>$</sup>20</h2>
               <ul class="pros-list">
                 <li class="pros">Illustration - One Side</li>
                 <li class="pros">Sketch - Two Sides</li>
@@ -244,13 +263,16 @@
             <a class="button cta-secondary" href="#contact-form">Buy Now</a>
           </div>
         </div>
+
       </section>
 
       <!-- Contact -->
         
       <section class="contact">
+
         <h2 class="section-title">Contact</h2>
         <div id="contact-form">
+
           <form name="contact" method="POST" enctype="multipart/form-data" data-netlify="true" action="/site-files/form-submission-success-message.html">
 
             <div class="form-column">
@@ -260,8 +282,7 @@
               <input type="text" autocomplete="off" id="femail" name="email" placeholder="Email" required>
             </div>
 
-            <div class="form-column" id="form-radio-buttons">
-              
+            <div class="form-column" id="form-radio-buttons">              
               <ul class="option-list" required>
                 <li class="choose-par">
                   <p>Choose your service:</p>
@@ -287,8 +308,6 @@
                   <label for="something-else">Something Else...</label>
                 </li>
               </ul>
-
-              
               <div class="pricing-plans-select">
                 <label for="plans">Choose a pricing plan:</label>
                 <select id="plans">
@@ -298,8 +317,6 @@
                   <option value="premium">Premium | $35</option>
                 </select>
               </div>
-              
-              
             </div>
             
             <div class="form-column upload">
@@ -313,28 +330,28 @@
                     <p class="small-paragraph">Add car images...</p>
                   </label>
                   <input id="file-input" type="file" class="hidden"/>
-                  
                 </div>
             </div>
+
             <div class="form-btn-wrapper">
               <a class="button cta-primary" type="submit" value="Submit">Submit</a>
             </div>
+
           </form>
+        
         </div>
+      
       </section>
 
     </main>
   
-
     <!-- Footer -->
-
 
     <footer>
   
       <div class="footer-content">
   
         <div class="footer-column" id="first-col">
-
           <h3 class="footer-headline">MARE CAR DESIGN</h3>
           <div class="icons">
             <a href="https://www.facebook.com/marecardesign" target="_blank">
@@ -348,7 +365,6 @@
             </a>
           </div>
           <div class="contact-mail">
-            
             <a href="mailto:marecardesign@gmail.com" target="_blank">
               <i class="fas fa-envelope"></i>
             </a>
@@ -356,7 +372,6 @@
               <p class="mail-label">marecardesign@gmail.com</p>
             </a>
           </div>
-        
         </div>
         
         <div class="footer-column">
@@ -378,7 +393,6 @@
               <li class="footer-link"><a href="gallery.html#visual-tuning">Tuning</a></li>
             </ul>
           </div>
-          
         </div>
   
         <div class="footer-column">

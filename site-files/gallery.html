@@ -1,278 +1,293 @@
+<!--
+  
+  Gallery
+
+    Wraps
+    Illustrations
+    Sketches
+    Tuning
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
-  
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="icon" type="image/png" href="https://bit.ly/2YOIV4l"/>
-    <link rel="stylesheet" href="./styles/normalize.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    
-    
-    <title>Mare Car Design | Gallery</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-  </head>
-  <body>
-    <a name="top"></a>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="icon" type="image/png" href="https://bit.ly/2YOIV4l" />
+  <link rel="stylesheet" href="./styles/normalize.css" />
+  <link rel="stylesheet" href="./styles/style.css" />
 
-    <!-- Content -->
+  <title>Mare Car Design | Gallery</title>
 
-    
-    
-      <!-- Header -->
+</head>
 
-      <header>
-        <nav id="head-nav">
-          <div class="logo-container">
-            <a href="index.html">
-              <img class="logo" src="./images/MCD-Logo.png" alt="Logo">
+<body>
+  <a name="top"></a>
+
+<!-- Content -->
+
+  <!-- Header -->
+
+  <header>
+
+    <nav id="head-nav">
+
+      <div class="logo-container">
+        <a href="index.html">
+          <img class="logo" src="./images/MCD-Logo.png" alt="Logo">
+        </a>
+      </div>
+
+      <input type="checkbox" id="click">
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul id="head-ul">
+        <div class="nav-wrapper">
+          <li class="head-li current"><a href="#top">Gallery</a></li>
+          <li class="head-li"><a href="index.html#pricing">Pricing</a></li>
+          <li class="head-li"><a href="index.html#contact-form">Contact</a></li>
+        </div>
+        <li>
+          <div class="icons">
+            <a href="https://www.facebook.com/marecardesign" target="_blank">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/marecardesign" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/marecardesigner" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="last-icon" href="mailto:marecardesign@gmail.com" target="_blank">
+              <i class="fas fa-envelope"></i>
             </a>
           </div>
-          <input type="checkbox" id="click">
-          <label for="click" class="menu-btn">
-            <i class="fas fa-bars"></i>
-          </label>
-          <ul id="head-ul">
-            <div class="nav-wrapper">
-              <li class="head-li current"><a href="#top">Gallery</a></li>
-              <li class="head-li"><a href="index.html#pricing">Pricing</a></li>
-              <li class="head-li"><a href="index.html#contact-form">Contact</a></li>
-            </div>
-            
-            <li>
-              <div class="icons">
-                <a href="https://www.facebook.com/marecardesign" target="_blank">
-                  <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://www.instagram.com/marecardesign" target="_blank">
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/marecardesigner" target="_blank" >
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a class="last-icon" href="mailto:marecardesign@gmail.com" target="_blank">
-                  <i class="fas fa-envelope"></i>
-                </a>
-              </div>
-            </li>
+        </li>
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <main>
+
+    <!-- Gallery -->
+
+    <section class="gallery">
+
+      <h1 class="section-title" id="title">Gallery</h1>
+      <div class="category-select">
+        <a class="wraps select" href="#wrap-designs">Wraps</a>
+        <a class="illustrations select" href="#illustrations">Illustrations</a>
+        <a class="sketches select" href="#sketches">Sketches</a>
+        <a class="tuning select" href="#visual-tuning">Tuning</a>
+      </div>
+
+      <div class="gallery-pictures">
+        <img id="wrap-designs" class="category-logo" src="./images/Wraps.jpg" alt="Car Wraps Logo">
+        <h3 class="category-title">Wrap Designs</h3>
+
+        <p class="project-title">Predator Wrap | 2018 Dogde Charger</p>
+        <div class="gallery-picture-wrapper first-image">
+          <img class="gallery-picture" src="./images/Predator-Logo.jpg" alt="Predator Logo">
+          <div class="overlay">
+            <h3 class="overlay-heading">Logo</h3>
+            <a href="./images/Predator-Logo.jpg" target=”_blank” class="button transparent-button">View</a>
+          </div>
+        </div>
+        <div class="gallery-picture-wrapper second-image">
+          <img class="gallery-picture" src="./images/Charger-Mockup.jpg" alt="Predator Wrap Mockup">
+          <div class="overlay">
+            <h3 class="overlay-heading">Mockup</h3>
+            <a href="./images/Charger-Mockup.jpg" target=”_blank” class="button transparent-button">View</a>
+          </div>
+        </div>
+        <div class="gallery-picture-wrapper third-image">
+          <img class="gallery-picture" src="./images/Charger-Front-View.jpg" alt="Charger Front View">
+          <div class="overlay">
+            <h3 class="overlay-heading">Front View</h3>
+            <a href="./images/Charger-Front-View.jpg" target=”_blank” class="button transparent-button">View</a>
+          </div>
+        </div>
+        <div class="gallery-picture-wrapper fourth-image">
+          <img class="gallery-picture" src="./images/Charger-Right-Side-View.jpg" alt="Charger Rear View">
+          <div class="overlay">
+            <h3 class="overlay-heading">Rear View</h3>
+            <a href="./images/Charger-Right-Side-View.jpg" target=”_blank” class="button transparent-button">View</a>
+          </div>
+        </div>
+        <div class="gallery-picture-wrapper fifth-image">
+          <img class="gallery-picture" src="./images/Charger-Top.jpg" alt="Charger Top View">
+          <div class="overlay">
+            <h3 class="overlay-heading">Top View</h3>
+            <a href="./images/Charger-Top.jpg" target=”_blank” class="button transparent-button">View</a>
+          </div>
+        </div>
+        <div class="gallery-picture-wrapper sixth-image">
+          <img class="gallery-picture" src="./images/Charger-Right-Side-View.jpg" alt="Charger Right Side View">
+          <div class="overlay">
+            <h3 class="overlay-heading">Right View</h3>
+            <a href="./images/Charger-Right-Side-View.jpg" target=”_blank” class="button transparent-button">View</a>
+          </div>
+        </div>
+
+        <img id="illustrations" class="category-logo" src="./images/Illustrations.jpg" alt="Car Illustrations Logo">
+        <h3 class="category-title">Illustrations</h3>
+
+        <div class="gallery-picture-wrapper first-image wider">
+          <img class="gallery-picture" src="./images/Totota-Supra.jpg" alt="Toyota Supra Illustration">
+          <div class="overlay">
+            <h3 class="overlay-heading">Toyota Supra</h3>
+            <a href="./images/Totota-Supra.jpg" target=”_blank” class="button transparent-button">View</a>
+          </div>
+        </div>
+        <div class="gallery-picture-wrapper second-image wider">
+          <img class="gallery-picture" src="./images/Toyota-Corrola-Verso-2010.jpg" alt="Toyota Verso Illustration">
+          <div class="overlay">
+            <h3 class="overlay-heading">Toyota Verso</h3>
+            <a href="./images/Toyota-Corrola-Verso-2010.jpg" target=”_blank” class="button transparent-button">View</a>
+          </div>
+        </div>
+
+        <img id="sketches" class="category-logo" src="https://bit.ly/2YAE1rg" alt="Car Sketches Logo">
+        <h3 class="category-title">Sketches</h3>
+
+        <div class="gallery-picture-wrapper first-image wider">
+          <img class="gallery-picture" src="./images/Lamborghini-from-NFS-Hot-Pursuit.jpg" alt="Lamborghini Sketch">
+          <div class="overlay">
+            <h3 class="overlay-heading">Lamborghini</h3>
+            <a href="./images/Lamborghini-from-NFS-Hot-Pursuit.jpg" target=”_blank”
+              class="button transparent-button">View</a>
+          </div>
+        </div>
+        <div class="gallery-picture-wrapper second-image wider">
+          <img class="gallery-picture" src="./images/Opel-Astra-GTC.jpg" alt="Opel Astra GTC Sketch">
+          <div class="overlay">
+            <h3 class="overlay-heading">Opel Astra GTC</h3>
+            <a href="./images/Opel-Astra-GTC.jpg" target=”_blank” class="button transparent-button">View</a>
+          </div>
+        </div>
+        <div class="gallery-picture-wrapper third-image wider">
+          <img class="gallery-picture" src="./images/Mercedes-AMG-One.jpg" alt="Mercedes AMG One Sketch">
+          <div class="overlay">
+            <h3 class="overlay-heading">Mercedes AMG One</h3>
+            <a href="./images/Mercedes-AMG-One.jpg" target=”_blank” class="button transparent-button">View</a>
+          </div>
+        </div>
+        <div class="gallery-picture-wrapper fourth-image wider">
+          <img class="gallery-picture" src="./images/MCD-4.jpg" alt="MCD 4 Sketch">
+          <div class="overlay">
+            <h3 class="overlay-heading">MCD 4</h3>
+            <a href="./images/MCD-4.jpg" target=”_blank” class="button transparent-button">View</a>
+          </div>
+        </div>
+        <div class="gallery-picture-wrapper fifth-image wider">
+          <img class="gallery-picture" src="./images/MCD-3.jpg" alt="MCD 3 Sketch">
+          <div class="overlay">
+            <h3 class="overlay-heading">MCD 3</h3>
+            <a href="./images/MCD-3.jpg" target=”_blank” class="button transparent-button">View</a>
+          </div>
+        </div>
+        <div class="gallery-picture-wrapper sixth-image wider">
+          <img class="gallery-picture" src="./images/Lightning-McQueen.jpg" alt="Lighning McQueen Sketch">
+          <div class="overlay">
+            <h3 class="overlay-heading">Lighning McQueen</h3>
+            <a href="./images/Lightning-McQueen.jpg" target=”_blank” class="button transparent-button">View</a>
+          </div>
+        </div>
+
+        <img id="visual-tuning" class="category-logo" src="./images/Visual-Tuning.jpg" alt="Car Visual Tuning Logo">
+        <h3 class="category-title">Visual Tuning</h3>
+
+        <div class="gallery-picture-wrapper first-image wider">
+          <img class="gallery-picture" src="./images/BMW-320.jpg" alt="BMW 320 Visual Tuning">
+          <div class="overlay">
+            <h3 class="overlay-heading">BMW 320</h3>
+            <a href="./images/Visual-Tuning.jpg" target=”_blank” class="button transparent-button">View</a>
+          </div>
+        </div>
+        <div class="gallery-picture-wrapper second-image wider">
+          <img class="gallery-picture" src="./images/BMW-320.jpg" alt="BMW 320 Visual Tuning">
+          <div class="overlay">
+            <h3 class="overlay-heading">BMW 320</h3>
+            <a href="./images/BMW-320.jpg" target=”_blank” class="button transparent-button">View</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <div class="footer-content">
+
+      <div class="footer-column" id="first-col">
+        <h3 class="footer-headline">MARE CAR DESIGN</h3>
+        <div class="icons">
+          <a href="https://www.facebook.com/marecardesign" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/marecardesign" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/marecardesigner" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+        <div class="contact-mail">
+          <a href="mailto:marecardesign@gmail.com" target="_blank">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="mailto:marecardesign@gmail.com" target="_blank">
+            <p class="mail-label">marecardesign@gmail.com</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3 class="footer-title">Navigation</h3>
+        <div class="links-wrapper">
+          <ul class="links home-links">
+            <li class="footer-link page-link"><a href="#top">Home</a></li>
+            <li class="footer-link"><a href="#about">About</a></li>
+            <li class="footer-link"><a href="#services">Services</a></li>
+            <li class="footer-link"><a href="#gallery">Gallery</a></li>
+            <li class="footer-link"><a href="#pricing">Pricing</a></li>
+            <li class="footer-link"><a href="#contact-form">Contact</a></li>
           </ul>
-        </nav>
-        
-        
-      </header>
-
-      <main>
-        
-        <section class="gallery">
-          <h2 class="section-title" id="title">Gallery</h2>
-          <div class="category-select">
-          <a class="wraps select" href="#wrap-designs">Wraps</a>
-          <a class="illustrations select" href="#illustrations">Illustrations</a>
-          <a class="sketches select" href="#sketches">Sketches</a>
-          <a class="tuning select" href="#visual-tuning">Tuning</a>
+          <ul class="links gallery-links">
+            <li class="footer-link page-link"><a href="gallery.html">Gallery</a></li>
+            <li class="footer-link"><a href="gallery.html#wrap-designs">Wraps</a></li>
+            <li class="footer-link"><a href="gallery.html#illustrations">Illustrations</a></li>
+            <li class="footer-link"><a href="gallery.html#sketches">Sketches</a></li>
+            <li class="footer-link"><a href="gallery.html#visual-tuning">Tuning</a></li>
+          </ul>
         </div>
-          <div class="gallery-pictures">
-            <img id="wrap-designs" class="category-logo" src="./images/Wraps.jpg" alt="Car Wraps Logo">
-            <h3 class="category-title" >Wrap Designs</h3>
-            <p class="project-title">Predator Wrap | 2018 Dogde Charger</p>
-            <div class="gallery-picture-wrapper first-image">
-                <img class="gallery-picture" src="./images/Predator-Logo.jpg" alt="Predator Logo">
-                <div class="overlay">
-                  <h3 class="overlay-heading">Logo</h3>
-                  <a href="./images/Predator-Logo.jpg" target=”_blank” class="button transparent-button">View</a>
-                </div>
-            </div>
-            
-            <div class="gallery-picture-wrapper second-image">
-                <img class="gallery-picture" src="./images/Charger-Mockup.jpg" alt="Predator Wrap Mockup">
-                <div class="overlay">
-                  <h3 class="overlay-heading">Mockup</h3>
-                  <a href="./images/Charger-Mockup.jpg" target=”_blank” class="button transparent-button">View</a>
-                </div>
-            </div>
-            <div class="gallery-picture-wrapper third-image">
-                <img class="gallery-picture" src="./images/Charger-Front-View.jpg" alt="Charger Front View">
-                <div class="overlay">
-                  <h3 class="overlay-heading">Front View</h3>
-                  <a href="./images/Charger-Front-View.jpg" target=”_blank” class="button transparent-button">View</a>
-                </div>
-            </div>
-            <div class="gallery-picture-wrapper fourth-image">
-                <img class="gallery-picture" src="./images/Charger-Right-Side-View.jpg" alt="Charger Rear View">
-                <div class="overlay">
-                  <h3 class="overlay-heading">Rear View</h3>
-                  <a href="./images/Charger-Right-Side-View.jpg" target=”_blank” class="button transparent-button">View</a>
-                </div>
-            </div>
-            <div class="gallery-picture-wrapper fifth-image">
-                <img class="gallery-picture" src="./images/Charger-Top.jpg" alt="Charger Top View">
-                <div class="overlay">
-                  <h3 class="overlay-heading">Top View</h3>
-                  <a href="./images/Charger-Top.jpg" target=”_blank” class="button transparent-button">View</a>
-                </div>
-            </div>
-            <div class="gallery-picture-wrapper sixth-image">
-              <img class="gallery-picture" src="./images/Charger-Right-Side-View.jpg" alt="Charger Right Side View">
-              <div class="overlay">
-                <h3 class="overlay-heading">Right View</h3>
-                <a href="./images/Charger-Right-Side-View.jpg" target=”_blank” class="button transparent-button">View</a>
-              </div>
-            </div>
+      </div>
 
-            <img id="illustrations" class="category-logo" src="./images/Illustrations.jpg" alt="Car Illustrations Logo">
-            <h3 class="category-title" >Illustrations</h3>
-            <div class="gallery-picture-wrapper first-image wider">
-                <img class="gallery-picture" src="./images/Totota-Supra.jpg" alt="Toyota Supra Illustration">
-                <div class="overlay">
-                  <h3 class="overlay-heading">Toyota Supra</h3>
-                  <a href="./images/Totota-Supra.jpg" target=”_blank” class="button transparent-button">View</a>
-                </div>
-            </div>
-            
-            <div class="gallery-picture-wrapper second-image wider">
-                <img class="gallery-picture" src="./images/Toyota-Corrola-Verso-2010.jpg" alt="Toyota Verso Illustration">
-                <div class="overlay">
-                  <h3 class="overlay-heading">Toyota Verso</h3>
-                  <a href="./images/Toyota-Corrola-Verso-2010.jpg" target=”_blank” class="button transparent-button">View</a>
-                </div>
-            </div>
-            
-            <img id="sketches" class="category-logo" src="https://bit.ly/2YAE1rg" alt="Car Sketches Logo">
-            <h3 class="category-title">Sketches</h3>
-            <div class="gallery-picture-wrapper first-image wider">
-                <img class="gallery-picture" src="./images/Lamborghini-from-NFS-Hot-Pursuit.jpg" alt="Lamborghini Sketch">
-                <div class="overlay">
-                  <h3 class="overlay-heading">Lamborghini</h3>
-                  <a href="./images/Lamborghini-from-NFS-Hot-Pursuit.jpg" target=”_blank” class="button transparent-button">View</a>
-                </div>
-            </div>
-            
-            <div class="gallery-picture-wrapper second-image wider">
-                <img class="gallery-picture" src="./images/Opel-Astra-GTC.jpg" alt="Opel Astra GTC Sketch">
-                <div class="overlay">
-                  <h3 class="overlay-heading">Opel Astra GTC</h3>
-                  <a href="./images/Opel-Astra-GTC.jpg" target=”_blank” class="button transparent-button">View</a>
-                </div>
-            </div>
-            <div class="gallery-picture-wrapper third-image wider">
-                <img class="gallery-picture" src="./images/Mercedes-AMG-One.jpg" alt="Mercedes AMG One Sketch">
-                <div class="overlay">
-                  <h3 class="overlay-heading">Mercedes AMG One</h3>
-                  <a href="./images/Mercedes-AMG-One.jpg" target=”_blank” class="button transparent-button">View</a>
-                </div>
-            </div>
-            <div class="gallery-picture-wrapper fourth-image wider">
-                <img class="gallery-picture" src="./images/MCD-4.jpg" alt="MCD 4 Sketch">
-                <div class="overlay">
-                  <h3 class="overlay-heading">MCD 4</h3>
-                  <a href="./images/MCD-4.jpg" target=”_blank” class="button transparent-button">View</a>
-                </div>
-            </div>
-            <div class="gallery-picture-wrapper fifth-image wider">
-                <img class="gallery-picture" src="./images/MCD-3.jpg" alt="MCD 3 Sketch">
-                <div class="overlay">
-                  <h3 class="overlay-heading">MCD 3</h3>
-                  <a href="./images/MCD-3.jpg" target=”_blank” class="button transparent-button">View</a>
-                </div>
-            </div>
-            <div class="gallery-picture-wrapper sixth-image wider">
-              <img class="gallery-picture" src="./images/Lightning-McQueen.jpg" alt="Lighning McQueen Sketch">
-              <div class="overlay">
-                <h3 class="overlay-heading">Lighning McQueen</h3>
-                <a href="./images/Lightning-McQueen.jpg" target=”_blank” class="button transparent-button">View</a>
-              </div>
-            </div>
+      <div class="footer-column">
+        <h3 class="footer-title">About</h3>
+        <p class="footer-text">We will make your car stand out with our wrap designs and visual tuning,
+          sketch or digitally illustrate it to create a memory for a whole life.
+        </p>
+        <a href="index.html#contact-form" class="button transparent-button">Contact Us</a>
+      </div>
 
-            <img id="visual-tuning" class="category-logo" src="./images/Visual-Tuning.jpg" alt="Car Visual Tuning Logo">
-            <h3 class="category-title" >Visual Tuning</h3>
-            <div class="gallery-picture-wrapper first-image wider">
-                <img class="gallery-picture" src="./images/BMW-320.jpg" alt="BMW 320 Visual Tuning">
-                <div class="overlay">
-                  <h3 class="overlay-heading">BMW 320</h3>
-                  <a href="./images/Visual-Tuning.jpg" target=”_blank” class="button transparent-button">View</a>
-                </div>
-            </div>
-            
-            <div class="gallery-picture-wrapper second-image wider">
-              <img class="gallery-picture" src="./images/BMW-320.jpg" alt="BMW 320 Visual Tuning">
-              <div class="overlay">
-                <h3 class="overlay-heading">BMW 320</h3>
-                <a href="./images/BMW-320.jpg" target=”_blank” class="button transparent-button">View</a>
-              </div>
-          </div>
-          </div>
-        </section>
+    </div>
 
-      </main>
+    <p class="copyright">&copy; 2021 Marko Meseldžija</p>
 
-      <footer>
-  
-        <div class="footer-content">
-    
-          <div class="footer-column" id="first-col">
-            <h3 class="footer-headline">MARE CAR DESIGN</h3>
-            <div class="icons">
-              <a href="https://www.facebook.com/marecardesign" target="_blank">
-                <i class="fab fa-facebook"></i>
-              </a>
-              <a href="https://www.instagram.com/marecardesign" target="_blank">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/marecardesigner" target="_blank" >
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </div>
-            <div class="contact-mail">
-              
-              <a href="mailto:marecardesign@gmail.com" target="_blank">
-                <i class="fas fa-envelope"></i>
-              </a>
-              <a href="mailto:marecardesign@gmail.com" target="_blank">
-                <p class="mail-label">marecardesign@gmail.com</p>
-              </a>
-            </div>
-            
-          </div>
-          
-          <div class="footer-column">
-            <h3 class="footer-title">Navigation</h3>
-            <div class="links-wrapper">
-              <ul class="links home-links">
-              <li class="footer-link page-link"><a href="#top">Home</a></li>
-              <li class="footer-link"><a href="#about">About</a></li>
-              <li class="footer-link"><a href="#services">Services</a></li>
-              <li class="footer-link"><a href="#gallery">Gallery</a></li>
-              <li class="footer-link"><a href="#pricing">Pricing</a></li>
-              <li class="footer-link"><a href="#contact-form">Contact</a></li>
-              </ul>
-              <ul class="links gallery-links">
-                <li class="footer-link page-link"><a href="gallery.html">Gallery</a></li>
-                <li class="footer-link"><a href="gallery.html#wrap-designs">Wraps</a></li>
-                <li class="footer-link"><a href="gallery.html#illustrations">Illustrations</a></li>
-                <li class="footer-link"><a href="gallery.html#sketches">Sketches</a></li>
-                <li class="footer-link"><a href="gallery.html#visual-tuning">Tuning</a></li>
-              </ul>
-            </div>
-          </div>
-    
-          <div class="footer-column">
-            <h3 class="footer-title">About</h3>
-            <p class="footer-text">We will make your car stand out with our wrap designs and visual tuning,
-              sketch or digitally illustrate it to create a memory for a whole life.
-            </p>
-            <a href="index.html#contact-form" class="button transparent-button">Contact Us</a>      
-          </div>
-    
-        </div>
-        
-        <p class="copyright">&copy; 2021 Marko Meseldžija</p>
+  </footer>
 
-      </footer>
-
-  </body>
+</body>
