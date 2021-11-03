@@ -1,14 +1,22 @@
 /*
 
-  Table of Contents
+  *** Table of Contents ***
 
     Global Variables
+      Typhography Scaling
+      Animation Variables
+      Colors and Shadows
+    
     Animations
+    
     Reset
+    
     Elements
-      UI
       Typography
-
+      Scrollbar
+    
+    Browser Compatibility
+    
     Sections
       Header
       Hero
@@ -20,6 +28,7 @@
       Footer
     
     Media Queries
+      Mobile Menu
 
 */
 
@@ -34,7 +43,7 @@
   --font-vw: 0.2vw;
   --letter-spacing: calc(0.5rem + 0.4vw);
 
-    /* Typhography scaling */
+  /* Typhography Scaling */
 
   --p-size: calc(var(--main-font-size) + var(--font-vw));
   --h3-size: calc(var(--p-size) * var(--scale) + var(--font-vw));
@@ -43,9 +52,13 @@
 
   --border-radius: 1.25rem;
 
+  /* Animation Variables */
+
   --anim-duration: 1s;
   --anim-delay: 0.2s;
   --anim-delay-start: 0.5s;
+
+  /* Colors and Shadows */
 
   --primary-color: hsl(212, 66%, 45%);
   --secondary-color: hsl(214, 89%, 55%);
@@ -72,11 +85,6 @@
   scroll-behavior: smooth;
 }
 
-@-moz-document url-prefix() {
-  :root {
-    cursor: auto;
-  }
-}
 
 /* Animations */
 
@@ -177,8 +185,6 @@
 
 /* Elements */
 
-/* UI */
-
 .button {
   display: flex;
   align-items: center;
@@ -229,59 +235,6 @@ ul {
 a {
   text-decoration: none;
 }
-
-.fas,
-.fab {
-  transition: 0.3s;
-  font-size: 1.8rem;
-  position: relative;
-}
-
-/* Custom Scrollbar */
-
-::-webkit-scrollbar {
-  inline-size: 1.75em;
-  block-size: 1em;
-}
-
-::-webkit-scrollbar-track {
-  background: linear-gradient(0deg, hsl(214, 89%, 55%), hsl(212, 66%, 45%));
-  border-radius: 100vw;
-  margin-block: 0.5em;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(0deg, hsl(214, 89%, 55%), hsl(212, 66%, 45%));
-  border-block: 0.1em solid hsl(0, 0%, 98%);
-  border-block: 0.1em solid var(--white-color);
-  border-radius: 100vw;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(0deg, hsl(214, 89%, 60%), hsl(212, 66%, 50%));
-}
-
-@supports (scrollbar-color: red blue) {
-  * {
-    scrollbar-color: var(--primary-color) hsl(214, 89%, 70%);
-    scrollbar-width: thin;
-  }
-}
-
-@supports (object-fit: cover) {
-  img {
-    object-fit: cover;
-  }
-}
-
-_:-ms-fullscreen, :root{ cursor: default; }
-_:-ms-fullscreen, :root .overlay { transform: translateX(-100%); }
-_:-ms-fullscreen, :root .logo {
-  width: 7rem;
-  height: 7rem;
-}
-_:-ms-fullscreen, :root .hero { margin-top: 15rem; }
-_:-ms-fullscreen, :root .scroll-arrow { margin-top: 10rem; }
 
 /* Typography */
 
@@ -345,6 +298,70 @@ p {
 .card-heading {
   font-weight: bold;
 }
+
+.fas,
+.fab {
+  transition: 0.3s;
+  font-size: 1.8rem;
+  position: relative;
+}
+
+/* Custom Scrollbar */
+
+::-webkit-scrollbar {
+  inline-size: 1.75em;
+  block-size: 1em;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(0deg, hsl(214, 89%, 55%), hsl(212, 66%, 45%));
+  border-radius: 100vw;
+  margin-block: 0.5em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(0deg, hsl(214, 89%, 55%), hsl(212, 66%, 45%));
+  border-block: 0.1em solid hsl(0, 0%, 98%);
+  border-block: 0.1em solid var(--white-color);
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(0deg, hsl(214, 89%, 60%), hsl(212, 66%, 50%));
+}
+
+/* Browser Compatibility */
+
+@-moz-document url-prefix() {
+  :root {
+    cursor: auto;
+  }
+}
+
+@supports (scrollbar-color: red blue) {
+  * {
+    scrollbar-color: var(--primary-color) hsl(214, 89%, 70%);
+    scrollbar-width: thin;
+  }
+}
+
+@supports (object-fit: cover) {
+  img {
+    object-fit: cover;
+  }
+}
+
+/* IE 11 Support */
+
+_:-ms-fullscreen, :root{ cursor: default; }
+_:-ms-fullscreen, :root .overlay { transform: translateX(-100%); }
+_:-ms-fullscreen, :root .logo {
+  width: 7rem;
+  height: 7rem;
+}
+_:-ms-fullscreen, :root .hero { margin-top: 15rem; }
+_:-ms-fullscreen, :root .scroll-arrow { margin-top: 10rem; }
+
 
 /* Custom Placeholder */
 
@@ -936,7 +953,7 @@ li .icons {
   inline-size: 47%;
 }
 
-/* Images Showing One By One */
+/* Images Appearing Effect */
 
 .first-image {
   animation: appear var(--anim-duration) var(--anim-delay-start) both;
@@ -1037,7 +1054,7 @@ li .icons {
   color: var(--lighter-text-color);
 }
 
-.overlay:hover {
+.overlay:is(:hover, :focus) {
   opacity: 1;
   background: rgba(0, 0, 0, 0.6);
   box-shadow: hsla(212, 66%, 45%, 0.15) 0rem 5rem 10rem -2rem,
