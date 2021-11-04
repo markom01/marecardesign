@@ -32,6 +32,14 @@
 </head>
 
 <body>
+
+  <!-- Loader -->
+
+  <div id="loader">
+    <img id="ellipse" src="./images/Ellipse-1.png" alt="Ellipse">
+    <img id="logo" src="./images/MCD-Logo-loader.png" alt="Loader logo">
+  </div>
+
   <a name="top"></a>
 
 <!-- Content -->
@@ -291,5 +299,17 @@
     <p class="copyright">&copy; 2021 Marko Meseldžija</p>
 
   </footer>
+
+  <!-- JS for Loader -->
+
+  <script>
+    document.documentElement.onload = function(){
+    document.getElementById("loader").style.display = "block";
+  };
+
+  window.onload = function(){
+      document.getElementById("loader").style.display = "none";
+  };
+  </script>
 
 </body>

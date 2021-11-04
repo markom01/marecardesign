@@ -1,3 +1,13 @@
+<!-- 
+
+Copyright (c) 2021, Marko Meseldžija
+All rights reserved.
+
+This source code is licensed under the BSD-style license found in the
+LICENSE file in the root directory of this source tree.
+
+-->
+
 <!--
 
   Home Page
@@ -38,6 +48,14 @@
   </head>
 
   <body>
+
+    <!-- Loader -->
+
+    <div id="loader">
+      <img id="ellipse" src="./images/Ellipse-1.png" alt="Ellipse">
+      <img id="logo" src="./images/MCD-Logo-loader.png" alt="Loader logo">
+    </div>
+
     <a id="top"></a>
 
   <!-- Content -->
@@ -408,7 +426,19 @@
       <p class="copyright">&copy; 2021 Marko Meseldžija</p>
     
     </footer>
+  
+  <!-- JS for Loader -->
 
+  <script>
+      document.documentElement.onload = function(){
+      document.getElementById("loader").style.display = "block";
+  };
+  
+  window.onload = function(){
+      document.getElementById("loader").style.display = "none";
+  };
+  </script>
+  
   </body>
 
 </html>

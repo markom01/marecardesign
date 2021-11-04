@@ -14,7 +14,7 @@
     Elements
       Typography
       Scrollbar
-    
+      Loader
     Browser Compatibility
     
     Sections
@@ -87,6 +87,17 @@
 
 
 /* Animations */
+
+@keyframes circular {
+  from {
+    transform:rotate(0deg)
+                translate(-50px);
+  }
+  to {
+    transform:rotate(360deg)
+    translate(-50px);
+  }
+}
 
 @keyframes drop {
   from {
@@ -328,6 +339,37 @@ p {
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(0deg, hsl(214, 89%, 60%), hsl(212, 66%, 50%));
+}
+
+/* Loader */
+
+#loader {
+  height: 100vh;
+  width: 100vw;
+  background: white;
+}
+
+#ellipse {
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: circular 2s linear infinite;
+}
+
+#logo {
+  width: 7.5rem;
+  height: 7.5rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 /* Browser Compatibility */
