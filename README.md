@@ -2,7 +2,7 @@
 
  # Mare Car Design Website
 
- ![Image](https://bit.ly/3EIHN1B)
+ ![Image](https://raw.githubusercontent.com/markom01/marecardesign/main/site-files/images/Safari-Mockup.jpg)
 
  MCD is my portfolio website where I showcase automotive art.
 

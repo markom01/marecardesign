@@ -648,7 +648,7 @@ li .icons {
   block-size: auto;
 }
 
-:is(.hero-image-wrapper, .recommended):after { /* Shiny Image Effect */
+:is(.hero-image-wrapper, .recommended)::after { /* Shiny Image Effect */
   content: "";
   top: 0;
   transform: translateX(100%);
@@ -1773,7 +1773,7 @@ footer .fas {
   .menu-btn i {
     display: block;
   }
-  #click:checked ~ i:before {
+  #click:checked ~ i::before {
     content: "\f00d";
   }
   #head-nav ul {
