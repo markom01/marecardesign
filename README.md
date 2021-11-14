@@ -8,7 +8,6 @@
 
 
  ## Features
----
 
  **Languages**
  * HTML
@@ -27,7 +26,6 @@
  
 
  ## Links
----
 
 [Link to Website](https://marecardesign.netlify.app/)
 
