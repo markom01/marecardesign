@@ -1051,6 +1051,11 @@ li .icons {
   box-shadow: var(--button-shadow);
 }
 
+.last-image {
+  width: 95%;
+  height: auto;
+}
+
 .overlay {
   position: absolute;
   display: flex;
