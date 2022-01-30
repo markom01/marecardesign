@@ -63,6 +63,7 @@
   --primary-color: hsl(212, 66%, 45%);
   --secondary-color: hsl(214, 89%, 55%);
   --white-color: hsl(0, 0%, 98%);
+  --light-color: hsl(0, 0%, 92%);
   --black-color: hsl(0, 0%, 10%);
   --p-color: hsl(0, 4%, 33%);
   --lighter-text-color: hsl(0, 0%, 90%);
@@ -72,8 +73,9 @@
     var(--secondary-color)
   );
 
-  --button-shadow: hsla(0, 0%, 0%, 0.1) 0rem 1rem 1.5rem -0.2rem,
-  hsla(0, 0%, 0%, 0.1) 0rem 0.3rem 2rem -0.3rem;
+  --box-shadow: 0 0.125rem 0.25rem rgba(41,41,41,0.075);
+  --button-shadow: 15px 15px 20px hsl(0, 0%, 88%),
+  -15px -15px 35px #ffffff;
   --second-button-shadow: hsla(212, 66%, 45%, .15) 0rem 1rem 1.5rem -.2rem,
   hsla(214, 89%, 55%, .15) 0rem .3rem 2rem -.3rem;
   --second-shadow: hsla(212, 66%, 45%, 0.15) 0rem 5rem 10rem -2rem,
@@ -204,8 +206,6 @@
   padding: 1rem;
   width: 13rem;
   height: 5rem;
-  inline-size: calc(11.5rem + 1vw);
-  block-size: calc(4rem + 0.5vw);
   border-radius: 1.25rem;
   border-radius: var(--border-radius);
   text-transform: uppercase;
@@ -215,17 +215,12 @@
   font-weight: 500;
   border-style: none;
   background-color: transparent;
-  box-shadow: hsla(0, 0%, 0%, 0.1) 0rem 1rem 1.5rem -0.2rem,
-  hsla(0, 0%, 0%, 0.1) 0rem 0.3rem 2rem -0.3rem;
   box-shadow: var(--button-shadow);
   transition: all 0.3s ease;
 }
 
-.button:is(:hover, :focus) {
-  outline: none;
-  box-shadow: hsla(212, 66%, 45%, .15) 0rem 1rem 1.5rem -.2rem,
-  hsla(214, 89%, 55%, .15) 0rem .3rem 2rem -.3rem;
-  box-shadow: var(--second-button-shadow);
+.no-shadow {
+  box-shadow: none;
 }
 
 img {
@@ -235,8 +230,7 @@ img {
 
 input[type="text"],
 textarea {
-  background-color: hsl(0, 0%, 98%);
-  background-color: var(--white-color);
+  background-color: var(--light-color);
 }
 
 ul {
@@ -272,7 +266,6 @@ h2 {
 h3 {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  margin-block: 2rem;
   color: hsl(0, 0%, 10%);
   color: var(--black-color);
   font-weight: bold;
@@ -294,7 +287,6 @@ p {
 
 #title {
   margin-top: 6rem;
-  margin-block-start: 6rem;
 }
 
 .spaced-text {
@@ -439,36 +431,29 @@ html {
 }
 
 body {
-  background-color: hsl(0, 0%, 98%);
-  background-color: var(--white-color);
+  background-color: var(--light-color);
   overflow-x: hidden;
 }
 
 main {
   margin-top: 3rem;
-  margin-block-start: 3rem;
   width: 100%;
-  inline-size: 100%;
   padding-left: 10%;
   padding-right: 7.5%;
-  padding-inline: 7.5%;
 }
 
 section {
   display: flex;
   min-height: 85vh;
-  min-block-size: 85vh;
   flex-direction: column;
   justify-content: center;
   margin-bottom: 20vh;
-  margin-block-end: 20vh;
 }
 
 /* Header */
 
 header {
   height: 10rem;
-  block-size: 10rem;
 }
 
 #head-nav {
@@ -477,20 +462,14 @@ header {
   display: flex;
   width: 100vw;
   height: 10rem;
-  inline-size: 100vw;
-  block-size: 10rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  padding-block: 1rem;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  background-color: hsl(0, 0%, 98%);
-  background-color: var(--white-color);
-  box-shadow: hsla(0, 0%, 0%, 0.1) 0rem 1rem 1.5rem -0.2rem,
-  hsla(0, 0%, 0%, 0.1) 0rem 0.3rem 2rem -0.3rem;
-  box-shadow: var(--button-shadow);
+  background-color: var(--light-color);
+  box-shadow: var(--box-shadow);
   z-index: 2;
   animation: drop var(--anim-duration);
 }
@@ -498,11 +477,9 @@ header {
 .logo-container {
   display: flex;
   margin-left: 7.5vw;
-  margin-inline-start: 7.5vw;
   aspect-ratio: 1 / 1;
   width: 7rem;
   height: 7rem;
-  inline-size: 7rem;
 }
 
 .logo-container a {
@@ -516,13 +493,11 @@ header {
 #head-ul {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  padding-block: 1rem;
 }
 
 .nav-wrapper {
   display: flex;
   margin-right: 7.5vw;
-  margin-inline-end: 7.5vw;
 }
 
 .head-li a {
@@ -534,7 +509,6 @@ header {
 
 nav li {
   margin-left: 2rem;
-  margin-inline-start: 2rem;
 }
 
 nav li a {
@@ -573,7 +547,6 @@ nav li a:is(:hover, :focus, :active),
   cursor: pointer;
   display: none;
   margin-right: 7.5vw;
-  margin-inline-end: 7.5vw;
 }
 
 input[type="checkbox"] {
@@ -588,7 +561,6 @@ li .icons {
 
 .hero {
   margin-top: 4rem;
-  margin-block-start: 4rem;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
@@ -602,8 +574,6 @@ li .icons {
   margin-top: 2rem;
   margin-bottom: 2rem;
   margin-right: 3rem;
-  margin-block: calc(2rem + 0.2vw);
-  margin-inline-end: calc(3rem + 0.2vw);
 }
 
 .hero-header {
@@ -614,10 +584,8 @@ li .icons {
 .hero-paragraph {
   padding-top: 4.5rem;
   padding-bottom: 4.5rem;
-  padding-block: calc(1.5rem + 2vw);
   margin-top: 4rem;
   margin-bottom: 4rem;
-  margin-block: calc(1.5rem + 2vw);
   -webkit-animation: slide-in-left var(--anim-duration) 0.4s both;
   animation: slide-in-left var(--anim-duration) 0.4s both;
 }
@@ -629,8 +597,6 @@ li .icons {
   margin: auto;
   width: 30vw;
   max-width: 50rem;
-  inline-size: 30vw;
-  max-inline-size: 50rem;
   position: relative;
   -webkit-animation: slide-in-right var(--anim-duration) both;
   animation: slide-in-right var(--anim-duration) both;
@@ -644,8 +610,6 @@ li .icons {
 .hero-image {
   width: 100%;
   height: auto;
-  inline-size: 100%;
-  block-size: auto;
 }
 
 :is(.hero-image-wrapper, .recommended)::after { /* Shiny Image Effect */
@@ -654,8 +618,6 @@ li .icons {
   transform: translateX(100%);
   width: 100%;
   height: 100%;
-  inline-size: 100%;
-  block-size: 100%;
   position: absolute;
   z-index: 1;
   animation: slide 6s infinite;
@@ -671,7 +633,6 @@ li .icons {
 .cta {
   display: flex;
   width: 100%;
-  inline-size: 100%;
 }
 
 .cta-primary {
@@ -689,12 +650,7 @@ li .icons {
 }
 
 .cta-secondary {
-  background: hsl(212, 66%, 45%);
-  background: var(--main-gradient);
-  color: hsl(0, 0%, 98%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--primary-color);
   -webkit-animation: slide-in-left var(--anim-duration) 0.7s both;
   animation: slide-in-left var(--anim-duration) 0.7s both;
 }
@@ -712,7 +668,6 @@ li .icons {
 .scroll-arrow {
   transform: scale(0.7);
   width: 100%;
-  inline-size: 100%;
   display: flex;
   justify-content: center;
 }
@@ -724,7 +679,6 @@ li .icons {
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 5rem;
-  margin-block-end: 5rem;
 }
 
 .about-image-wrapper,
@@ -741,8 +695,6 @@ li .icons {
 .about-image {
   height: 30rem;
   width: 40rem;
-  block-size: 30rem;
-  inline-size: 40rem;
   object-fit: cover;
   box-shadow: hsla(0, 0%, 0%, 0.1) 0rem 1rem 1.5rem -0.2rem,
   hsla(0, 0%, 0%, 0.1) 0rem 0.3rem 2rem -0.3rem;
@@ -751,7 +703,6 @@ li .icons {
 
 .about-p {
   min-width: 30%;
-  min-inline-size: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -762,7 +713,6 @@ li .icons {
 .about .cta-secondary {
   margin-left: auto;
   margin-right: auto;
-  margin-inline: auto;
 }
 
 /* Services */
@@ -770,13 +720,10 @@ li .icons {
 .section-title {
   margin-left: auto;
   margin-right: auto;
-  margin-inline: auto;
   text-align: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  padding-block: 1rem;
   margin-bottom: 10rem;
-  margin-block-end: 10rem;
   text-transform: uppercase;
   background: var(--main-gradient);
   color: hsl(212, 66%, 45%);
@@ -794,7 +741,6 @@ li .icons {
 .card .cta-secondary {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
-  margin-block: 2.5rem;
   padding: 1.5rem;
 }
 
@@ -818,13 +764,10 @@ li .icons {
   padding: 2rem;
   padding-top: 6rem;
   padding-bottom: 6rem;
-  padding-block: 6rem;
   text-align: center;
   transition: all 0.3s;
   min-width: 30rem;
   max-width: 34rem;
-  min-inline-size: 30rem;
-  max-inline-size: calc(30rem + 3vw);
 }
 
 .card-heading {
@@ -846,7 +789,6 @@ li .icons {
 .card .cta-secondary {
   margin-left: auto;
   margin-right: auto;
-  margin-inline: auto;
   justify-self: flex-end;
 }
 
@@ -861,21 +803,17 @@ li .icons {
 
 .section-title#title {
   margin-bottom: 0;
-  margin-block-end: 0;
 }
 
 /* Gallery Navigation */
 
 .category-select {
   width: 50%;
-  inline-size: 50%;
   margin-left: auto;
   margin-right: auto;
-  margin-inline: auto;
   margin-top: 6rem;
   padding: 0.5rem;
   min-width: 13rem;
-  min-inline-size: 13rem;
   border-radius: 1.25rem;
   border-radius: var(--border-radius);
   display: flex;
@@ -896,8 +834,6 @@ li .icons {
   margin: 1rem;
   min-width: 10rem;
   max-width: 15rem;
-  min-inline-size: 10rem;
-  max-inline-size: 15rem;
   border-radius: 1.25rem;
   border-radius: var(--border-radius);
   box-shadow: hsla(0, 0%, 0%, 0.1) 0rem 1rem 1.5rem -0.2rem,
@@ -941,8 +877,6 @@ li .icons {
   border-radius: 50%;
   height: 6rem;
   width: 6rem;
-  block-size: 6rem;
-  inline-size: 6rem;
   margin-top: 10rem;
 }
 
@@ -954,21 +888,16 @@ li .icons {
 .category-title {
   align-items: center;
   width: 100%;
-  inline-size: 100%;
   margin-bottom: 8rem;
-  margin-block-end: 8rem;
   animation: slide-in-left var(--anim-duration)
     calc(var(--anim-delay) + var(--anim-delay) + var(--anim-delay)) both;
 }
 
 .project-title {
   width: 100%;
-  inline-size: 100%;
   margin-left: 3rem;
   margin-right: 3rem;
   margin-bottom: 4rem;
-  margin-inline: 3rem;
-  margin-block-end: 4rem;
   text-align: center;
   animation: slide-in-left var(--anim-duration)
     calc(
@@ -983,16 +912,12 @@ li .icons {
   position: relative;
   width: 31%;
   height: 40rem;
-  inline-size: 31%;
-  block-size: 40rem;
   margin: 1rem;
   margin-top: 2rem;
-  margin-block-start: 2rem;
 }
 
 .wider {
   width: 47%;
-  inline-size: 47%;
 }
 
 /* Images Appearing Effect */
@@ -1040,7 +965,6 @@ li .icons {
 
 .gallery-picture-wrapper img {
   width: 100%;
-  inline-size: 100%;
   border-radius: 1.25rem;
   border-radius: var(--border-radius);
   -o-object-fit: cover;
@@ -1064,8 +988,6 @@ li .icons {
   align-items: center;
   width: 100%;
   height: 100%;
-  inline-size: 100%;
-  block-size: 100%;
   padding: 2.5rem;
   border-radius: 1.25rem;
   border-radius: var(--border-radius);
@@ -1075,7 +997,6 @@ li .icons {
 
 .transparent-button {
   margin-top: 2rem;
-  margin-block-start: 2rem;
   color: hsl(0, 0%, 98%);
   color: var(--white-color);
   border: 0.2rem solid hsl(0, 0%, 98%);
@@ -1084,7 +1005,6 @@ li .icons {
 
 .overlay-heading {
   margin-bottom: 1.5rem;
-  margin-block-end: 1.5rem;
   text-align: center;
   color: hsl(0, 0%, 98%);
   color: var(--white-color);
@@ -1093,7 +1013,6 @@ li .icons {
 
 .overlay-category {
   margin-bottom: 0;
-  margin-block-end: 0;
   text-align: center;
   font-size: 1.3rem;
   font-size: var(--s-font-size);
@@ -1113,8 +1032,6 @@ li .icons {
   margin-left: auto;
   margin-right: auto;
   margin-top: 6rem;
-  margin-inline: auto;
-  margin-block-start: 6rem;
 }
 
 /* Pricing */
@@ -1123,8 +1040,6 @@ li .icons {
   padding-top: 0;
   padding-left: 0;
   padding-right: 0;
-  padding-block-start: 0;
-  padding-inline: 0;
   transform: scale(1.1);
   background: hsl(212, 66%, 45%);
   background: var(--main-gradient);
@@ -1152,11 +1067,9 @@ li .icons {
 .recommended .spaced-text {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  padding-block: 1rem;
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
   width: auto;
-  inline-size: auto;
   color: hsl(212, 66%, 45%);
   background: var(--main-gradient);
   -webkit-background-clip: text;
@@ -1168,7 +1081,6 @@ li .icons {
   display: inline-block;
   margin-top: 4rem;
   margin-bottom: 4rem;
-  margin-block: 4rem;
 }
 
 .pros {
@@ -1223,10 +1135,8 @@ form {
   border-radius: var(--border-radius);
   margin: 2rem;
   margin-bottom: 4rem;
-  margin-block-end: 4rem;
   padding: calc(2rem + 0.5vw);
   padding-bottom: 6rem;
-  padding-block-end: calc(5rem + 0.5vw);
   transition: all 0.3s;
 }
 
@@ -1235,14 +1145,11 @@ form {
   display: flex;
   flex: 1;
   height: 100%;
-  block-size: 100%;
   flex-direction: column;
   margin: 3rem;
   margin-bottom: 6.5rem;
   margin: calc(2rem + 0.5vw);
-  margin-block-end: calc(5rem + 1vw);
   min-width: 30rem;
-  min-inline-size: 30rem;
 }
 
 .upload {
@@ -1266,12 +1173,9 @@ form {
   display: flex;
   cursor: pointer;
   height: 1.5rem;
-  block-size: 1.5rem;
   margin-left: 1rem;
   margin-right: 1rem;
   margin-top: 2.1rem;
-  margin-inline: 1rem;
-  margin-block-start: 2.1rem;
   align-items: center;
 }
 
@@ -1285,7 +1189,6 @@ form {
 
 .choose-par {
   margin-bottom: 2rem;
-  margin-block-end: 2rem;
 }
 
 .option-list {
@@ -1295,7 +1198,6 @@ form {
 .option-item {
   display: flex;
   margin-bottom: 1rem;
-  margin-block-end: 1rem;
 }
 
 input[type="text"],
@@ -1303,7 +1205,6 @@ textarea,
 #plans {
   display: flex;
   max-width: 40rem;
-  max-inline-size: 40rem;
   font-size: 1.3rem;
   font-size: var(--s-font-size);
   color: hsl(0, 4%, 33%);
@@ -1322,37 +1223,22 @@ input[type="text"],
 #plans {
   width: 100%;
   height: 5rem;
-  inline-size: 100%;
-  block-size: 5rem;
   margin-bottom: 3rem;
-  margin-block-end: 3rem;
   padding: 1rem;
 }
 
 input[type="radio"] {
   margin-right: 2rem;
-  margin-inline-end: 2rem;
   width: 1.5rem;
   height: 1.5rem;
-  inline-size: 1.5rem;
-  block-size: 1.5rem;
 }
 
 textarea {
   height: 12rem;
   min-width: 4rem;
   width: 100%;
-  block-size: 12rem;
-  min-inline-size: 4rem;
-  inline-size: 100%;
   padding: 2rem 1rem;
   resize: none;
-}
-
-:is([type="text"], textarea):focus {
-  box-shadow: hsla(212, 66%, 45%, 0.2) 0rem 5rem 10rem -2rem,
-    hsla(214, 89%, 55%, 0.2) 0rem 3rem 6rem -3rem;
-  box-shadow: var(--second-button-shadow);
 }
 
 label {
@@ -1371,21 +1257,17 @@ label {
   font-size: 1.8rem;
   font-size: var(--p-size);
   margin-bottom: 2rem;
-  margin-block-end: 2rem;
 }
 
 #plans {
   height: 4rem;
-  block-size: 4rem;
-  background: hsl(0, 0%, 98%);
-  background: var(--white-color);
+  background: var(--light-color);
 }
 
 p.small-paragraph {
   width: 11rem;
   inline-size: max-content;
   margin-left: 1rem;
-  margin-inline-start: 1rem;
   font-size: 1.3rem;
   font-size: var(--s-font-size);
 }
@@ -1394,8 +1276,6 @@ p.small-paragraph {
   display: flex;
   width: 100%;
   height: 5rem;
-  inline-size: 100%;
-  block-size: 5rem;
   align-self: flex-end;
   justify-content: center;
 }
@@ -1405,8 +1285,6 @@ a[type="submit"] {
   margin: 4rem auto;
   margin-left: 0;
   margin-top: 1rem;
-  margin-inline: auto;
-  margin-block-start: 1rem;
 }
 
 /* Footer */
@@ -1427,16 +1305,12 @@ footer {
   margin-left: 7.5vw;
   margin-right: 7.5vw;
   margin-bottom: 10rem;
-  margin-inline: 7.5vw;
-  margin-bottom: 10rem;
 }
 
 .footer-column {
   display: flex;
   width: 27%;
-  inline-size: calc(80% / 3);
   min-width: 25rem;
-  min-inline-size: 25rem;
   flex-direction: column;
   justify-content: center;
   margin: 2rem;
@@ -1449,26 +1323,21 @@ footer {
   color: var(--white-color);
   align-items: center;
   margin-bottom: 2rem;
-  margin-block-end: 2rem;
 }
 
 .footer-headline {
   min-width: 18rem;
-  min-inline-size: 18rem;
 }
 
 .home-links {
   margin-right: 2rem;
-  margin-inline-end: 2rem;
 }
 
 footer .icons {
   display: flex;
   width: 10rem;
-  inline-size: 10rem;
   justify-content: space-between;
   margin-bottom: 2rem;
-  margin-block-end: 2rem;
 }
 
 footer .fab,
@@ -1476,8 +1345,6 @@ footer .fas {
   cursor: pointer;
   width: 2rem;
   height: 2rem;
-  inline-size: 2rem;
-  block-size: 2rem;
   transition: all 0.2s;
   border-radius: 0;
   color: hsl(0, 0%, 98%);
@@ -1492,13 +1359,11 @@ footer .fas {
 
 .contact-mail .fas {
   margin-right: 1rem;
-  margin-inline-end: 1rem;
 }
 
 .contact-mail p {
   display: inline;
   margin-bottom: 0;
-  margin-block-end: 0;
 }
 
 .contact-mail a {
@@ -1520,15 +1385,12 @@ footer .fas {
 .footer-text {
   display: flex;
   min-width: 20rem;
-  min-inline-size: 20rem;
   margin-bottom: 0;
-  margin-block-end: 0;
   line-height: 1.2;
 }
 
 .footer-column .transparent-button {
   margin-top: 4rem;
-  margin-block-start: 4rem;
 }
 
 .footer-link a,
@@ -1552,9 +1414,7 @@ footer .fas {
 .footer-link {
   margin: 2rem;
   margin-left: 0;
-  margin-inline-start: 0;
   min-width: 8.5rem;
-  min-inline-size: 8.5rem;
 }
 
 .footer-link a {
@@ -1578,7 +1438,6 @@ footer .fas {
   display: flex;
   justify-content: center;
   width: 100%;
-  inline-size: 100%;
   margin-bottom: 0;
   color: hsl(0, 0%, 98%);
   color: var(--white-color);
@@ -1593,10 +1452,7 @@ footer .fas {
   textarea {
     width: 90%;
     height: 10rem;
-    inline-size: 90%;
-    block-size: 10rem;
     max-width: unset;
-    max-inline-size: unset;
   }
 }
 
@@ -1604,21 +1460,17 @@ footer .fas {
   .gallery-picture-wrapper {
     width: 47%;
     height: 30rem;
-    inline-size: 47%;
-    block-size: 30rem;
   }
 }
 
 @media all and (max-width: 1023px) {
   section {
     margin-bottom: 15rem;
-    margin-block-end: 15rem;
   }
 
   nav li {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
-    margin-inline: 0.5rem;
   }
 
   nav li a {
@@ -1633,12 +1485,9 @@ footer .fas {
   .hero-content {
     text-align: center;
     height: 40vh;
-    block-size: 40vh;
     margin-top: 5vw;
     margin-bottom: 5vw;
     margin-right: 0;
-    margin-block: 5vw;
-    margin-inline-end: 0;
     align-items: center;
   }
 
@@ -1656,7 +1505,6 @@ footer .fas {
     flex: none;
     align-self: center;
     width: 40rem;
-    inline-size: 40rem;
   }
 
   .scroll-arrow {
@@ -1665,7 +1513,6 @@ footer .fas {
 
   textarea#fmessage {
     height: 14rem;
-    block-size: 14rem;
   }
 
   .footer-column {
@@ -1687,7 +1534,6 @@ footer .fas {
 
   .footer-link {
     margin-left: 2rem;
-    margin-inline-start: 2rem;
   }
 
   .contact-mail {
@@ -1745,29 +1591,23 @@ footer .fas {
 @media all and (max-width: 800px) {
   section {
     margin-bottom: 10rem;
-    margin-block-end: 10rem;
   }
 
   #head-nav {
     height: 7rem;
-    block-size: 7rem;
   }
 
   .nav-wrapper {
     margin-right: 0;
-    margin-inline-end: 0;
   }
 
   nav ul {
     margin-right: 0;
-    margin-inline-end: 0;
   }
 
   .logo-container {
     height: 5rem;
     width: 5rem;
-    block-size: 5rem;
-    inline-size: 5rem;
   }
 
   /* Mobile Menu */
@@ -1787,12 +1627,9 @@ footer .fas {
     justify-content: space-between;
     position: relative;
     transform: translateX(110vw);
-    background-color: hsl(0, 0%, 98%);
-    background-color: var(--white-color);
+    background-color: var(--light-color);
     height: 95vh;
     width: 100%;
-    block-size: 95vh;
-    inline-size: 100%;
     text-align: center;
     transition: all 0.3s ease;
     z-index: 3;
@@ -1802,12 +1639,10 @@ footer .fas {
   }
   nav li {
     width: 100%;
-    inline-size: 100%;
     margin: 1rem 0;
   }
   nav li a {
     width: 100%;
-    inline-size: 100%;
   }
 
   .nav-wrapper {
@@ -1816,12 +1651,8 @@ footer .fas {
     justify-content: space-between;
     width: 100%;
     height: 70%;
-    inline-size: 100%;
-    block-size: 70%;
     padding-top: 15rem;
     padding-bottom: 3rem;
-    padding-block-start: 15rem;
-    padding-block-end: 3rem;
   }
 
   .icons a {
@@ -1838,8 +1669,6 @@ footer .fas {
   .icons a {
     width: 2.1rem;
     height: 2.1rem;
-    block-size: 2.1rem;
-    inline-size: 2.1rem;
     padding: 0;
   }
 
@@ -1849,7 +1678,6 @@ footer .fas {
 
   #click:checked ~ a {
     margin-left: 0;
-    margin-inline-start: 0;
   }
 
   .hero {
@@ -1860,13 +1688,10 @@ footer .fas {
   .category-logo {
     width: 5rem;
     height: 5rem;
-    block-size: 5rem;
-    inline-size: 5rem;
   }
 
   #title {
     margin-top: 0;
-    margin-block-start: 0rem;
   }
 
   .select {
@@ -1878,9 +1703,6 @@ footer .fas {
     height: auto;
     width: 90%;
     max-height: 40rem;
-    block-size: auto;
-    inline-size: 90%;
-    max-block-size: 40rem;
   }
 
   textarea {
@@ -1890,7 +1712,6 @@ footer .fas {
   footer {
     padding-top: 5rem;
     padding-bottom: 5rem;
-    padding-block: 5rem;
   }
 
   .footer-column {
@@ -1907,87 +1728,69 @@ footer .fas {
 @media all and (max-width: 530px) {
   .section-title {
     margin-bottom: 5rem;
-    margin-block-end: 5rem;
   }
 
   .hero-content {
     height: 30vh;
-    block-size: 30vh;
   }
 
   .hero-image-wrapper {
     width: 100%;
-    inline-size: 100%;
   }
 
   .hero-image {
     width: 100%;
     height: auto;
-    inline-size: 100%;
-    block-size: auto;
   }
 
   .scroll-arrow {
     margin-top: 3rem;
-    margin-block-start: 3rem;
   }
 
   .about-image {
     width: 70vw;
     height: auto;
-    inline-size: 70vw;
-    block-size: auto;
   }
 
   .card {
     margin-left: 0;
     margin-right: 0;
-    margin-inline: 0;
     min-width: 80%;
-    min-inline-size: 80%;
   }
 
   .gallery-picture-wrapper {
     height: auto;
     width: 90%;
-    inline-size: 90%;
-    block-size: auto;
     max-block-size: initial;
   }
 
   .overlay-heading {
     margin-bottom: 0.5rem;
-    margin-block-end: 0.5rem;
   }
 
   .form-column {
     margin: 2rem 0;
     min-width: 20rem;
-    min-inline-size: 20rem;
   }
 
   input[type="text"],
   textarea {
     min-width: 30rem;
-    max-inline-size: 30rem;
     text-align: center;
   }
 
   .file-upload {
     margin-bottom: 2rem;
-    margin-block-end: 2rem;
   }
 }
 
 @media all and (max-width: 400px) {
   .cta-primary {
     margin-right: 1rem;
-    margin-inline-end: 1rem;
   }
 
   .cta-secondary {
     margin-left: 1rem;
-    margin-inline-start: 1rem;
   }
 
   form {
@@ -1996,11 +1799,9 @@ footer .fas {
 
   input[type="text"] {
     height: 4rem;
-    block-size: 4rem;
   }
 
   .home-links {
     margin-right: 0;
-    margin-inline-end: 0;
   }
 }
