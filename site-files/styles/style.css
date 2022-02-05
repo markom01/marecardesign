@@ -74,12 +74,10 @@
   );
 
   --box-shadow: 0 0.125rem 0.25rem rgba(41,41,41,0.075);
-  --button-shadow: 15px 15px 20px hsl(0, 0%, 88%),
-  -15px -15px 35px #ffffff;
-  --second-button-shadow: hsla(212, 66%, 45%, .15) 0rem 1rem 1.5rem -.2rem,
-  hsla(214, 89%, 55%, .15) 0rem .3rem 2rem -.3rem;
-  --second-shadow: hsla(212, 66%, 45%, 0.15) 0rem 5rem 10rem -2rem,
-    hsla(214, 89%, 55%, 0.15) 0rem 3rem 6rem -3rem;
+  --button-shadow: inset 0 0 0 transparent, inset 0 0 0 transparent, 
+      15px 15px 20px hsl(0, 0%, 88%), -15px -15px 35px #fff;
+  --inset-box-shadow: inset 10px 10px 20px hsl(0, 0%, 88%), inset -10px -10px 35px #fff,
+      0px 0px 0px transparent, 0px 0px 0px transparent;
   
   cursor: url(https://bit.ly/3FKWsLe), pointer;
   caret-color: hsl(212, 66%, 45%);
@@ -338,7 +336,7 @@ p {
 #loader {
   height: 100vh;
   width: 100vw;
-  background: white;
+  background: var(--light-color);
 }
 
 #ellipse {
@@ -356,6 +354,7 @@ p {
 #logo {
   width: 7.5rem;
   height: 7.5rem;
+  /* border-radius: 200px; */
   position: absolute;
   top: 0;
   bottom: 0;
@@ -658,6 +657,7 @@ li .icons {
 .cta-secondary:is(:hover, :focus) {
   color: hsl(214, 89%, 55%);
   color: var(--secondary-color);
+  box-shadow: var(--inset-box-shadow);
 }
 
 .cta .cta-secondary {
@@ -794,9 +794,6 @@ li .icons {
 
 .card:hover {
   transform: scale(1.025);
-  box-shadow: hsla(212, 66%, 45%, 0.15) 0rem 5rem 10rem -2rem,
-    hsla(214, 89%, 55%, 0.15) 0rem 3rem 6rem -3rem;
-  box-shadow: var(--second-shadow);
 }
 
 /* Gallery */
@@ -853,9 +850,7 @@ li .icons {
 }
 
 .select:hover {
-  box-shadow: hsla(212, 66%, 45%, .15) 0rem 1rem 1.5rem -.2rem,
-  hsla(214, 89%, 55%, .15) 0rem .3rem 2rem -.3rem;
-  box-shadow: var(--second-button-shadow);
+  box-shadow: var(--inset-box-shadow);
   color: hsl(212, 66%, 45%);
   color: var(--primary-color);
 }
@@ -1219,6 +1214,10 @@ textarea,
   transition: 0.3s;
 }
 
+:is(input[type="text"],textarea,#plans):focus {
+  box-shadow: var(--inset-box-shadow);
+}
+
 input[type="text"],
 #plans {
   width: 100%;
@@ -1505,6 +1504,7 @@ footer .fas {
     flex: none;
     align-self: center;
     width: 40rem;
+    border-radius: var(--border-radius);
   }
 
   .scroll-arrow {
@@ -1775,7 +1775,7 @@ footer .fas {
 
   input[type="text"],
   textarea {
-    min-width: 30rem;
+    min-width: 28rem;
     text-align: center;
   }
 
