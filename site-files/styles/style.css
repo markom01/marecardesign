@@ -2,6 +2,8 @@
 
   *** Table of Contents ***
 
+    Imports
+
     Global Variables
       Typhography Scaling
       Animation Variables
@@ -31,6 +33,11 @@
       Mobile Menu
 
 */
+
+/* Imports */
+
+@import url('../fonts/TitilliumWeb-Regular.ttf');
+@import url('../fonts/HemiHead-Bold-Italic.ttf');
 
 /* Global Variables */
 
@@ -64,7 +71,7 @@
   --secondary-color: hsl(214, 89%, 55%);
   --white-color: hsl(0, 0%, 98%);
   --light-color: hsl(0, 0%, 92%);
-  --black-color: hsl(0, 0%, 10%);
+  --black-color: hsl(0, 0%, 20%);
   --p-color: hsl(0, 4%, 33%);
   --lighter-text-color: hsl(0, 0%, 90%);
   --main-gradient: -webkit-linear-gradient(
@@ -84,7 +91,6 @@
   caret-color: var(--primary-color);
   scroll-behavior: smooth;
 }
-
 
 /* Animations */
 
@@ -184,7 +190,6 @@
   margin: 0rem;
   padding: 0rem;
   box-sizing: border-box;
-  font-family: "Titillium Web", sans-serif;
 }
 
 ::selection {
@@ -210,7 +215,7 @@
   letter-spacing: 0.2rem;
   font-size: calc(0.9rem + 0.1vw);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: normal;
   border-style: none;
   background-color: transparent;
   box-shadow: var(--button-shadow);
@@ -241,10 +246,27 @@ a {
 
 /* Typography */
 
+@font-face {
+  font-family: 'Titillium Web';
+  src: url('../fonts/TitilliumWeb-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Hemi Head';
+  src: url('../fonts/HemiHead-Bold-Italic.ttf');
+}
+
+:root {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, .card-heading {
+  font-family: 'Hemi Head', sans-serif;
+  color: var(--primary-color);
+}
+
 h1 {
   font-weight: bolder;
-  color: hsl(0, 0%, 10%);
-  color: var(--black-color);
   font-size: 4.8rem;
   font-size: var(--h1-size);
   line-height: 1.2;
@@ -253,8 +275,6 @@ h1 {
 
 h2 {
   font-weight: bold;
-  color: hsl(0, 0%, 10%);
-  color: var(--black-color);
   font-size: 3.5rem;
   font-size: var(--h2-size);
   line-height: 1.2;
@@ -264,8 +284,6 @@ h2 {
 h3 {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  color: hsl(0, 0%, 10%);
-  color: var(--black-color);
   font-weight: bold;
   font-size: 2.6rem;
   font-size: var(--h3-size);
@@ -280,7 +298,7 @@ p {
   line-height: calc(1.5rem + 0.4vw);
   color: hsl(0, 4%, 33%);
   color: var(--p-color);
-  font-weight: lighter;
+  font-weight: normal;
 }
 
 #title {
@@ -481,10 +499,6 @@ header {
   height: 70px; */
 }
 
-.logo-container a {
-  /* display: flex; */
-}
-
 .logo {
   border-radius: 50%;
 }
@@ -518,7 +532,6 @@ nav li a {
   text-decoration: none;
   font-size: 1.8rem;
   font-size: var(--p-size);
-  font-weight: 500;
   padding: 1.5rem;
   letter-spacing: 0.1rem;
   transition: 0.1s;
@@ -775,8 +788,6 @@ li .icons {
 }
 
 .card-heading {
-  color: hsl(0, 0%, 10%);
-  color: var(--black-color);
   font-weight: 500;
 }
 
@@ -1092,10 +1103,6 @@ li .icons {
 
 .price {
   color: hsl(212, 66%, 45%);
-  background: var(--main-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .recommended #price {
@@ -1110,7 +1117,7 @@ li .icons {
 
 sup {
   font-size: initial;
-  font-weight: 100;
+  font-weight: 500;
 }
 
 .recommended .cta-secondary {
